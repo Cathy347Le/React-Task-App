@@ -1,8 +1,10 @@
+import Task from "./Task";
+
 function TaskList({ tasks }) {
   return (
     <div className="task-list-container">
       {tasks.map((task) => (
-        <h3 key={task.id}>{task.title}</h3>
+        <Task key={task.id} task={task} />
       ))}
     </div>
   );

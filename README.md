@@ -21,5 +21,8 @@ readme.md, .gitignore, bootstrap, sass
 - Add key prop to task items
 - Convert taskList to "state" data via useState
   `const [tasks, setTasks] = useState();`
-- Since you want other components to access the task state data, it is reccomend you lift the state up. Have the app.js management the data and have it passed down to other components. Once of the toughest thing for a junior is understanding which component should manage the state.
--
+- Since you want other components to access the task state data, it is recommend you <strong>lift the state up<strong>. Have the app.js management the data and have it passed down to other components. Once of the toughest thing for a junior is understanding which component should manage the state.
+
+### Create Task Component
+
+- Create a task component (name, title, date);
