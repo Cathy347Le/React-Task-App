@@ -32,4 +32,6 @@ readme.md, .gitignore, bootstrap, sass
   - Create handleDelete on app.js - just console log for now for testing purposes
   - Pass that down to , with the property called onDelete
   - When the X close is hit in the task component `onClick = {onDelete}`, the default info that will console is the event info
-    - If you want to pass the task.id, insted of calling onDelete directly, you call a function that runs onDelete and pass in the task.id
+    - If you want to pass the task.id, instead of calling onDelete directly, you call a function reference that runs onDelete and passes in the task.id
+    - If the console.log works and displayed the id, update the handleDelete method to remove the task selected
+      `const handleDelete = (id) => { setTasks(tasks.filter((task) => task.id !== id)); };`
