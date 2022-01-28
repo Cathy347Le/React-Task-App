@@ -17,4 +17,4 @@ readme.md, .gitignore, bootstrap, sass
 
 #### Create Task List Component
 
-- Create 3 Task and render the title
+- Create 3 Tasks and render the title
