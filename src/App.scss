@@ -34,4 +34,11 @@ main {
     position: absolute;
     right: 16px;
   }
+  .toggle-completed {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-left: 8px;
+    }
+  }
 }

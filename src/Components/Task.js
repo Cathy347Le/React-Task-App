@@ -1,6 +1,6 @@
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaTimesCircle } from "react-icons/fa";
 
-function Task({ task, onDelete }) {
+function Task({ task, onDelete, onToggleCompleted }) {
   return (
     <div className="task-item">
       <h5>
@@ -12,7 +12,13 @@ function Task({ task, onDelete }) {
         />
       </h5>
       <p>{task.date}</p>
-      <p>Completed: </p>
+      <p className="toggle-completed">
+        Completed:{" "}
+        <FaTimesCircle
+          style={{ color: "red", cursor: "pointer" }}
+          onClick={() => onToggleCompleted(task.id)}
+        />
+      </p>
     </div>
   );
 }

@@ -26,7 +26,17 @@ function App() {
   ]);
 
   const handleDelete = (id) => {
+    // console.log("test delete", id);
     setTasks(tasks.filter((task) => task.id !== id));
+  };
+
+  const handleToggleCompleted = (id) => {
+    // console.log("test toggle", id);
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task
+      )
+    );
   };
 
   return (
@@ -34,7 +44,11 @@ function App() {
       <Header name="Cathy" />
       <main>
         {tasks.length > 0 ? (
-          <TaskList tasks={tasks} onDelete={handleDelete} />
+          <TaskList
+            tasks={tasks}
+            onDelete={handleDelete}
+            onToggleCompleted={handleToggleCompleted}
+          />
         ) : (
           "Hooray you have no more tasks."
         )}
