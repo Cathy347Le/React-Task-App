@@ -1,22 +1,23 @@
 # React Task Tracker
 
-#### Files install
+### Files install
 
 readme.md, .gitignore, bootstrap, sass
 
-#### Create a header component
+### Create a header component
 
-- Create e component folder -> Header.js
+- Create a components folder -> Header.js
 - Create a functional component
 - Add Button - add new task
 
-#### Create a button component
+### Create a button component
 
 - Add background color and text prop
-- Add default props (ignore propTypes)
+- Add default props (ignore propTypes for now)
 
-#### Create Task List Component
+### Create Task List Component
 
 - Create 3 Tasks and render the title
 - Add key prop to task items
-- Convert taskList to "state" data via useState `const [tasks, setTasks] = useState();`
+- Convert taskList to "state" data via useState
+  `const [tasks, setTasks] = useState();`
