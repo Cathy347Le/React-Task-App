@@ -19,4 +19,4 @@ readme.md, .gitignore, bootstrap, sass
 
 - Create 3 Tasks and render the title
 - Add key prop to task items
-- Convert taskList to "state" data via useState
+- Convert taskList to "state" data via useState `const [tasks, setTasks] = useState();`
