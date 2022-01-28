@@ -1,9 +1,11 @@
 import React from "react";
+import Button from "./Button";
 
-function Header() {
+function Header({ name }) {
   return (
     <header className="app-header">
-      <h1>Cathy's Task Tracker</h1>
+      <h1>{name}'s Task Tracker</h1>
+      <Button color="blue" text="Add New Ask" />
     </header>
   );
 }
