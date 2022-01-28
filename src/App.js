@@ -33,7 +33,11 @@ function App() {
     <div className="App">
       <Header name="Cathy" />
       <main>
-        <TaskList tasks={tasks} onDelete={handleDelete} />
+        {tasks.length > 0 ? (
+          <TaskList tasks={tasks} onDelete={handleDelete} />
+        ) : (
+          "Hooray you have no more tasks."
+        )}
       </main>
     </div>
   );

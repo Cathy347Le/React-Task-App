@@ -39,3 +39,4 @@ readme.md, .gitignore, bootstrap, sass
     setTasks(tasks.filter((task) => task.id !== id));
     };
     ```
+    - Conditional render: add a message when there are no more tasks
