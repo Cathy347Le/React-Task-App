@@ -18,3 +18,4 @@ readme.md, .gitignore, bootstrap, sass
 #### Create Task List Component
 
 - Create 3 Tasks and render the title
+- Add key prop to task items
