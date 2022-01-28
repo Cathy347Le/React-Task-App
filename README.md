@@ -28,3 +28,8 @@ readme.md, .gitignore, bootstrap, sass
 - Create a task component (name, title, date);
 - Add X close icon to task item
   `npm i react-icons`
+- When you want to delete a task (hitting the X button), that takes happens in the task component, but the state is managed in the app component. What needs to be done is the event (delete) needs to be raised and have app.js handle the event. Method is onDelete and handleDelete.
+  - Create handleDelete on app.js - just console log for now for testing purposes
+  - Pass that down to , with the property called onDelete
+  - When the X close is hit in the task component `onClick = {onDelete}`, the default info that will console is the event info
+    - If you want to pass the task.id, insted of calling onDelete directly, you call a function that runs onDelete and pass in the task.id

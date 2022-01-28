@@ -24,11 +24,16 @@ function App() {
       completed: false,
     },
   ]);
+
+  const handleDelete = (id) => {
+    console.log("task deleted", id);
+  };
+
   return (
     <div className="App">
       <Header name="Cathy" />
       <main>
-        <TaskList tasks={tasks} />
+        <TaskList tasks={tasks} onDelete={handleDelete} />
       </main>
     </div>
   );

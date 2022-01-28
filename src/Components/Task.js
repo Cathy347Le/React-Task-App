@@ -1,6 +1,6 @@
 import { FaTimes } from "react-icons/fa";
 
-function Task({ task }) {
+function Task({ task, onDelete }) {
   return (
     <div className="task-item">
       <h5>
@@ -8,6 +8,7 @@ function Task({ task }) {
         <FaTimes
           className="close-icon"
           style={{ color: "red", cursor: "pointer" }}
+          onClick={() => onDelete(task.id)}
         />
       </h5>
       <p>{task.date}</p>
