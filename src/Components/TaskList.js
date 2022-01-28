@@ -23,9 +23,9 @@ const taskData = [
 
 function TaskList() {
   return (
-    <div class="task-list-container">
+    <div className="task-list-container">
       {taskData.map((task) => (
-        <h3>{task.title}</h3>
+        <h3 key={task.id}>{task.title}</h3>
       ))}
     </div>
   );
