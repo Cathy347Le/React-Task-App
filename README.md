@@ -11,3 +11,6 @@ readme.md, .gitignore, bootstrap, sass
 - Add Button - add new task
 
 #### Create a button component
+
+- Add background color and text prop
+- Add default props
