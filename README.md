@@ -26,3 +26,5 @@ readme.md, .gitignore, bootstrap, sass
 ### Create Task Component
 
 - Create a task component (name, title, date);
+- Add X close icon to task item
+  `npm i react-icons`
