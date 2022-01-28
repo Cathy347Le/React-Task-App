@@ -29,4 +29,9 @@ main {
   background-color: rgba(209, 216, 224, 0.3);
   margin-block: 16px;
   padding: 16px 16px 5px 16px;
+  position: relative;
+  .close-icon {
+    position: absolute;
+    right: 16px;
+  }
 }
