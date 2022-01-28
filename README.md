@@ -13,4 +13,8 @@ readme.md, .gitignore, bootstrap, sass
 #### Create a button component
 
 - Add background color and text prop
-- Add default props
+- Add default props (ignore propTypes)
+
+#### Create Task List Component
+
+- Create 3 Task and render the title
