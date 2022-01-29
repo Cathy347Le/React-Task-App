@@ -42,3 +42,4 @@ readme.md, .gitignore, bootstrap, sass
     - Conditional render: add a message when there are no more tasks
 - Add a completed functionality
   - Create handleToggleCompleted and onToggleCompleted and console.log the event and id
+  - Also render class dynamically to change task border color - see code in task.js for diff ways of doing this

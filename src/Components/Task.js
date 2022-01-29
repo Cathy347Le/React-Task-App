@@ -1,8 +1,20 @@
 import { FaTimes, FaTimesCircle, FaCheckCircle } from "react-icons/fa";
 
 function Task({ task, onDelete, onToggleCompleted }) {
+  // RENDERING CLASSES DYNAMICALLY
+  //   const getTaskItemClasses = () => {
+  //     let taskItemClasses = "task-item";
+  //     return (taskItemClasses += task.completed ? " completed" : "");
+  //     return task.completed ? (taskItemClasses += " completed") : taskItemClasses;
+  //     if (task.completed === true) {
+  //       taskItemClasses += " completed";
+  //     }
+  //     return taskItemClasses;
+  //   };
+
   return (
-    <div className="task-item">
+    // <div className={getTaskItemClasses()}>
+    <div className={`task-item ${task.completed ? "completed" : ""}`}>
       <h5>
         {task.title}{" "}
         <FaTimes

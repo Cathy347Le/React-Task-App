@@ -30,6 +30,7 @@ main {
   margin-block: 16px;
   padding: 16px 16px 5px 16px;
   position: relative;
+  border-left: 5px solid red;
   .close-icon {
     position: absolute;
     right: 16px;
@@ -40,5 +41,8 @@ main {
     svg {
       margin-left: 8px;
     }
+  }
+  &.completed {
+    border-left-color: green !important;
   }
 }
