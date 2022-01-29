@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import "./App.scss";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import TaskList from "./Components/TaskList";
 import AddTask from "./Components/AddTask";
+import About from "./Components/About";
+import Notes from "./Components/Notes";
+import "./App.scss";
 
 function App() {
   const [showAddTaskForm, setShowAddTaskForm] = useState(false);
@@ -60,28 +63,40 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Header
-        name="Cathy"
-        onShowAddTaskForm={handleShowAddTaskForm}
-        onAddTaskButtonToggle={showAddTaskForm}
-      />
-      <main>
-        {showAddTaskForm && <AddTask onAddTask={handleAddTask} />}
-        {tasks.length > 0 ? (
-          <TaskList
-            tasks={tasks}
-            onDelete={handleDelete}
-            onToggleCompleted={handleToggleCompleted}
-            onDeleteAllTask={handleDeleteAllTask}
+    <Router>
+      <div className="App">
+        <Header
+          name="Cathy"
+          onShowAddTaskForm={handleShowAddTaskForm}
+          onAddTaskButtonToggle={showAddTaskForm}
+        />
+        <main>
+          <Route
+            path="/"
+            exact
+            render={(props) => (
+              <>
+                {showAddTaskForm && <AddTask onAddTask={handleAddTask} />}
+                {tasks.length > 0 ? (
+                  <TaskList
+                    tasks={tasks}
+                    onDelete={handleDelete}
+                    onToggleCompleted={handleToggleCompleted}
+                    onDeleteAllTask={handleDeleteAllTask}
+                  />
+                ) : (
+                  <p className="no-tasks-msg text-center">
+                    Hooray you have no more tasks.
+                  </p>
+                )}
+              </>
+            )}
           />
-        ) : (
-          <p className="no-tasks-msg text-center">
-            Hooray you have no more tasks.
-          </p>
-        )}
-      </main>
-    </div>
+          <Route path="/About" component={About} />
+          <Route path="/Notes" component={Notes} />
+        </main>
+      </div>
+    </Router>
   );
 }
 

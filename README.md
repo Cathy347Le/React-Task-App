@@ -81,7 +81,11 @@ readme.md, .gitignore, bootstrap, sass
 - Console.log method to check plumbing
 - update handleDeleteAllTask to clear all the tasks `setTasks(tasks.length === 0);`
 
-#### Routing
+#### Routing - v5
 
 - Install react-router old version , not v6 `npm i react-router-dom@5.2.0`
 - Add a NavBar in the header component
+- Add `import { BrowserRouter as Router, Route } from "react-router-dom";` in app.js
+- Add About and Notes page component
+- In app.js wrap everything in <Router></Router> and then add your Route paths
+- To bypass page reload, replace anchor links with <Link> component
