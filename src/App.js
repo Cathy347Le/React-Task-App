@@ -9,26 +9,7 @@ import "./App.scss";
 
 function App() {
   const [showAddTaskForm, setShowAddTaskForm] = useState(false);
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: "Vaccum home",
-      date: "Saturday",
-      completed: false,
-    },
-    {
-      id: 2,
-      title: "Hang floating shelves",
-      date: "Friday",
-      completed: false,
-    },
-    {
-      id: 3,
-      title: "Wash dishes",
-      date: "Friday",
-      completed: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   const handleShowAddTaskForm = () => {
     setShowAddTaskForm(!showAddTaskForm);

@@ -115,5 +115,8 @@ readme.md, .gitignore, bootstrap, sass
 
   - Mockup backend
   - `npm i json-server`
-  - add script in package.json to server the json server
+  - Add script in package.json to server the json server
   - `npm run start` runs app and `npm run server` runs the server and creates db.json file, which will be where your app data will be
+  - Update db.json with your data. Remove the data in app.js and set the useState into an empty array.
+  - In db.json file, need to change it to JSON objects. Aka keys need to be strings.
+  - For new task items, backend will automatically create ids for you.
