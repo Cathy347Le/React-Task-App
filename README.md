@@ -72,3 +72,5 @@ readme.md, .gitignore, bootstrap, sass
   ```
   - You can test the logic above by manually updating the intial useState to true or false
   - Create methods to update the toggle functionality onShowAddTaskForm, handleShowAddTaskForm
+  - Add conditional rendering to the Add New Task button.
+    - Add New Task purple button changes to Hide Task Form orange

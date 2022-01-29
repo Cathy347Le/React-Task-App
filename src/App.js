@@ -55,7 +55,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header name="Cathy" onShowAddTaskForm={handleShowAddTaskForm} />
+      <Header
+        name="Cathy"
+        onShowAddTaskForm={handleShowAddTaskForm}
+        onAddTaskButtonToggle={showAddTaskForm}
+      />
       <main>
         {showAddTaskForm && <AddTask onAddTask={handleAddTask} />}
         {tasks.length > 0 ? (
