@@ -125,8 +125,16 @@ https://www.npmjs.com/package/json-server
   - Once db.json file is complete, you go to port 5000/tasks to see your data!
 
 - Get task to show on task app, need useEffect
+
   - useEffect because you want something to happen when the app loads
   - Create a fetchTasks method inside useEffect to use Fetch the server url and console the data (make sure plumbing is correct)
   - Let fetchTasks be its standalone function because you are likely to use it else where
   - update useEffect to getTasks, which makes the API call and set it inside setTasks
     - voila you see your tasks on the app!
+
+- Update delete Task to delete from the server
+- Bc every time you refresh it, it comes back
+- Update handleDelete method to fetch the backend url id and put in a DELETE method request to that url
+
+  - You will see your the is remove db.json and therefore on port 5000/tasks
+  - To get your original data back, you will likely need to reload your json data into db.json
