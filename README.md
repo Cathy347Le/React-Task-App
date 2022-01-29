@@ -102,8 +102,16 @@ readme.md, .gitignore, bootstrap, sass
 - Wrap <Route> with <Routes>. Replace component={About} with element={<About/>} which takes JSX nw
 
 - Common differences are:
+
   - <Switch> doesn’t exist anymore. Replaced with <Routes> and you have to wrap your routes with <Routes>
   - No more rendering components or passing props to the rendering component in <Route> with component and render anymore. Both are replaced by a single element prop which takes in JSX. So instead of component={Home} will be element={<Home/>}
   - No need for the keyword exact anymore
   - Only <Route> are allowed in <Routes>. No other children tags are allowed
   - Redirect replaced with Navigate and useHistory is now useNavigate
+
+  ### JSON server
+
+  https://www.npmjs.com/package/json-server
+
+  - Mockup backend
+  - `npm i json-server`
