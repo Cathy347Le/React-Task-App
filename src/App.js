@@ -38,12 +38,27 @@ function App() {
     setShowAddTaskForm(!showAddTaskForm);
   };
 
-  const handleAddTask = (task) => {
-    // console.log(task);
-    const id = Math.floor(Math.random() * 10000) + 1; // Generate a random id number
-    const newTask = { id, ...task };
-    setTasks([...tasks, newTask]);
+  const handleAddTask = async (task) => {
+    //POST request to the server
+    const res = await fetch("http://localhost:5000/tasks", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(task),
+    });
+
+    //Update the frontend
+    const data = res.json();
+    setTasks([...tasks, data]);
   };
+
+  // const handleAddTask = (task) => {
+  //   // console.log(task);
+  //   const id = Math.floor(Math.random() * 10000) + 1; // Generate a random id number
+  //   const newTask = { id, ...task };
+  //   setTasks([...tasks, newTask]);
+  // };
 
   const handleDelete = async (id) => {
     // console.log("test delete", id);

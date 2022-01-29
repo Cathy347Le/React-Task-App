@@ -5,6 +5,24 @@
       "title": "Hang floating shelves",
       "date": "Friday",
       "completed": false
+    },
+    {
+      "title": "Brush Gouda",
+      "date": "Sunday",
+      "completed": false,
+      "id": 3
+    },
+    {
+      "title": "Test",
+      "date": "Tuesday",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "title": "Yoga",
+      "date": "Everyday",
+      "completed": false,
+      "id": 5
     }
   ]
 }

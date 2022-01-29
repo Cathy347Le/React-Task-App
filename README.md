@@ -133,8 +133,18 @@ https://www.npmjs.com/package/json-server
     - voila you see your tasks on the app!
 
 - Update delete Task to delete from the server
-- Bc every time you refresh it, it comes back
-- Update handleDelete method to fetch the backend url id and put in a DELETE method request to that url
+
+  - Bc every time you refresh it, it comes back
+  - Update handleDelete method to fetch the backend url id and put in a DELETE method request to that url
 
   - You will see your the is remove db.json and therefore on port 5000/tasks
   - To get your original data back, you will likely need to reload your json data into db.json
+
+- Update Add New Task to the server
+  - update handleAddTask method to make a POST request
+  - No need to create a unique ID for the new task = server automatically does that
+  - fetch the server, make a POST request (add method, headers, and body). Also make the update on the frontend using setTasks which includes the new task
+
+BUG
+
+- Adding in the task via the add Task form does not render correctly on the frontend. Works okay on the server side, which you can tell when you refresh the app. Something is wrong on the fronend side.
