@@ -74,3 +74,9 @@ readme.md, .gitignore, bootstrap, sass
   - Create methods to update the toggle functionality onShowAddTaskForm, handleShowAddTaskForm
   - Add conditional rendering to the Add New Task button.
     - Add New Task purple button changes to Hide Task Form orange
+
+#### Add Delete All Task Button
+
+- Reuse button component and create methods handleDeleteAllTask and onDeleteAllTask
+- Console.log method to check plumbing
+- update handleDeleteAllTask to clear all the tasks `setTasks(tasks.length === 0);`

@@ -19,12 +19,19 @@ main {
   justify-content: center;
   max-width: 500px;
   margin: auto;
+  .no-tasks-msg {
+    font-size: 20px;
+  }
 }
 
 .task-list-container {
   border: 1px solid black;
   min-height: 500px;
   padding: 16px 32px;
+  button {
+    display: block;
+    margin: auto !important;
+  }
 }
 
 .task-item {

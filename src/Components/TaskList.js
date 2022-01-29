@@ -1,6 +1,7 @@
 import Task from "./Task";
+import Button from "./Button";
 
-function TaskList({ tasks, onDelete, onToggleCompleted }) {
+function TaskList({ tasks, onDelete, onToggleCompleted, onDeleteAllTask }) {
   return (
     <div className="task-list-container">
       {tasks.map((task) => (
@@ -11,6 +12,7 @@ function TaskList({ tasks, onDelete, onToggleCompleted }) {
           onToggleCompleted={onToggleCompleted}
         />
       ))}
+      <Button text="Delete All Task" onClick={onDeleteAllTask} />
     </div>
   );
 }

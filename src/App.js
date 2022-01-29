@@ -43,6 +43,12 @@ function App() {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
+  const handleDeleteAllTask = () => {
+    // console.log(tasks);
+    // console.log(tasks.length);
+    setTasks(tasks.length === 0);
+  };
+
   const handleToggleCompleted = (id) => {
     // console.log("test toggle", id);
     // Make sure correct task item is targeted (id match check), if id matches, copy the task (...), but change the completed property to the opposite. Otherwise no change.
@@ -67,6 +73,7 @@ function App() {
             tasks={tasks}
             onDelete={handleDelete}
             onToggleCompleted={handleToggleCompleted}
+            onDeleteAllTask={handleDeleteAllTask}
           />
         ) : (
           <p className="no-tasks-msg text-center">
