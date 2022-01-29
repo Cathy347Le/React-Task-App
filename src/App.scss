@@ -15,12 +15,14 @@
 main {
   text-align: left;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  max-width: 500px;
+  margin: auto;
 }
 
 .task-list-container {
   border: 1px solid black;
-  min-width: 800px;
   min-height: 500px;
   padding: 16px 32px;
 }

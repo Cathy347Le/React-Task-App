@@ -1,17 +1,20 @@
+import "./AddTask.scss";
 function AddTask() {
   return (
     <form className="add-new-task-form">
-      <div className="form-control">
+      <div className="form-ctrl">
         <label for="title">
-          Title: <input type="text" id="title" name="task_title" />
+          Title:
+          <input type="text" id="title" name="task_title" />
         </label>
       </div>
-      <div className="form-control">
+      <div className="form-ctrl">
         <label for="date">
-          Date: <input type="text" id="date" name="task_date" />
+          Date:
+          <input type="text" id="date" name="task_date" />
         </label>
       </div>
-      <input type="submit" value="Add New Task" />
+      <input className="form-button" type="submit" value="Add New Task" />
     </form>
   );
 }

@@ -1,0 +1,30 @@
+form {
+  min-width: 80%;
+  margin: auto;
+  .form-ctrl {
+    width: 100%;
+  }
+  label {
+    display: block;
+    padding-block: 16px;
+    input {
+      margin-left: 16px;
+      width: 85%;
+    }
+    input#title {
+      margin-left: 18px;
+    }
+  }
+}
+
+.form-button {
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem !important;
+  font-size: 16px !important;
+  margin-block: 16px;
+  display: block;
+  width: 100%;
+}
