@@ -148,3 +148,9 @@ https://www.npmjs.com/package/json-server
 BUG
 
 - Adding in the task via the add Task form does not render correctly on the frontend. Works okay on the server side, which you can tell when you refresh the app. Something is wrong on the fronend side. const data is suppose to set to await. Remember asynchronous calls!
+
+- Update Completed on the server
+  - Need to fetch the correct task (create fetchSingleTask), change the completed property and make a PUT request to change the task in the server.
+
+BUG
+-Server is updating correctly, but not frontend

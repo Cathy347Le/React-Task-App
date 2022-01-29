@@ -26,6 +26,13 @@ function App() {
     return data;
   };
 
+  const fetchSingleTask = async (id) => {
+    const res = await fetch(`http://localhost:5000/tasks/${id}`);
+    const data = await res.json();
+    // console.log(data);
+    return data;
+  };
+
   //FETCH & PROMISE
   // useEffect(() => {
   //   const url = "http://localhost:5000/tasks";
@@ -75,15 +82,42 @@ function App() {
     setTasks(tasks.length === 0);
   };
 
-  const handleToggleCompleted = (id) => {
-    // console.log("test toggle", id);
-    // Make sure correct task item is targeted (id match check), if id matches, copy the task (...), but change the completed property to the opposite. Otherwise no change.
+  const handleToggleCompleted = async (id) => {
+    //Make the change
+    const getToggledTask = await fetchSingleTask(id);
+    const updatedTask = {
+      ...getToggledTask,
+      completed: !getToggledTask.completed,
+    };
+
+    //PUT request to the server
+    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(updatedTask),
+    });
+
+    const data = await res.json();
+
+    //Update the frontend
     setTasks(
       tasks.map((task) =>
-        task.id === id ? { ...task, completed: !task.completed } : task
+        task.id === id ? { ...task, completed: !data.completed } : task
       )
     );
   };
+
+  // const handleToggleCompleted = (id) => {
+  //   // console.log("test toggle", id);
+  //   // Make sure correct task item is targeted (id match check), if id matches, copy the task (...), but change the completed property to the opposite. Otherwise no change.
+  //   setTasks(
+  //     tasks.map((task) =>
+  //       task.id === id ? { ...task, completed: !task.completed } : task
+  //     )
+  //   );
+  // };
 
   return (
     <Router>
