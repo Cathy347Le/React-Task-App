@@ -5,6 +5,7 @@ import TaskList from "./Components/TaskList";
 import AddTask from "./Components/AddTask";
 
 function App() {
+  const [showAddTaskForm, setShowAddTaskForm] = useState(false);
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -25,6 +26,10 @@ function App() {
       completed: false,
     },
   ]);
+
+  const handleShowAddTaskForm = () => {
+    setShowAddTaskForm(!showAddTaskForm);
+  };
 
   const handleAddTask = (task) => {
     // console.log(task);
@@ -50,9 +55,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header name="Cathy" />
+      <Header name="Cathy" onShowAddTaskForm={handleShowAddTaskForm} />
       <main>
-        <AddTask onAddTask={handleAddTask} />
+        {showAddTaskForm && <AddTask onAddTask={handleAddTask} />}
         {tasks.length > 0 ? (
           <TaskList
             tasks={tasks}

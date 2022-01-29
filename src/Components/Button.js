@@ -1,9 +1,12 @@
-import { buildQueries } from "@testing-library/react";
 import React from "react";
 import "./Button.scss";
 
-function Button({ color, text }) {
-  return <button style={{ backgroundColor: color }}>{text}</button>;
+function Button({ color, text, onClick }) {
+  return (
+    <button onClick={onClick} style={{ backgroundColor: color }}>
+      {text}
+    </button>
+  );
 }
 
 Button.defaultProps = {

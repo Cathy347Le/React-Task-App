@@ -62,3 +62,13 @@ readme.md, .gitignore, bootstrap, sass
   - Update handleAddTask method to add the new task in the state
     - React will create a unique key id for the new task? I guess not.
     - Use spread operator to add in the new Task
+
+#### Add Feature - Toggle Add Form
+
+- Add useState on App.js to toggle the form - showAddTaskForm, setshowAddTaskForm
+  - In app.js update how Add task from renders.
+  ```
+  {showAddTaskForm && <AddTask onAddTask={handleAddTask} />}
+  ```
+  - You can test the logic above by manually updating the intial useState to true or false
+  - Create methods to update the toggle functionality onShowAddTaskForm, handleShowAddTaskForm
