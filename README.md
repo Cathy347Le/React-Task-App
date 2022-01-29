@@ -119,4 +119,5 @@ readme.md, .gitignore, bootstrap, sass
   - `npm run start` runs app and `npm run server` runs the server and creates db.json file, which will be where your app data will be
   - Update db.json with your data. Remove the data in app.js and set the useState into an empty array.
   - In db.json file, need to change it to JSON objects. Aka keys need to be strings.
-  - For new task items, backend will automatically create ids for you.
+    - Removing the data- cause your app to show no task
+    - For new task items, backend will automatically create ids for you.
