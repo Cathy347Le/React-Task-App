@@ -81,7 +81,9 @@ readme.md, .gitignore, bootstrap, sass
 - Console.log method to check plumbing
 - update handleDeleteAllTask to clear all the tasks `setTasks(tasks.length === 0);`
 
-#### Routing - v5
+### ROUTING
+
+#### Version 5
 
 - Install react-router old version , not v6 `npm i react-router-dom@5.2.0`
 - Add a NavBar in the header component
@@ -92,3 +94,15 @@ readme.md, .gitignore, bootstrap, sass
 - Make Add New Task Button only appear on the homepage (not About or Notes page)
   - useLocation from react-router-dom in header.js
   - useLocation gives you access to useLocation.pathname (renamed to location)
+
+#### Version 6
+
+- Stable version released in early Jan. Updating to version 6 will break your React app
+- Install `npm i react-router-dom@6`
+
+- Common differences are:
+  - <Switch> doesn’t exist anymore. Replaced with <Routes> and you have to wrap your routes with <Routes>
+  - No more rendering components or passing props to the rendering component in <Route> with component and render anymore. Both are replaced by a single element prop which takes in JSX. So instead of component={Home} will be element={<Home/>}
+  - No need for the keyword exact anymore
+  - Only <Route> are allowed in <Routes>. No other children tags are allowed
+  - Redirect replaced with Navigate and useHistory is now useNavigate
