@@ -27,7 +27,10 @@ function App() {
   ]);
 
   const handleAddTask = (task) => {
-    console.log(task);
+    // console.log(task);
+    const id = Math.floor(Math.random() * 10000) + 1; // Generate a random id number
+    const newTask = { id, ...task };
+    setTasks([...tasks, newTask]);
   };
 
   const handleDelete = (id) => {

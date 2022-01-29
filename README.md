@@ -56,3 +56,5 @@ readme.md, .gitignore, bootstrap, sass
   - Include form validation
   - Add task title and date and check that the data console log correctly.
   - Update handleAddTask method to add the new task in the state
+    - React will create a unique key id for the new task? I guess not.
+    - Use spread operator to add in the new Task
