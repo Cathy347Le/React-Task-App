@@ -48,3 +48,6 @@ readme.md, .gitignore, bootstrap, sass
   ### Add New Task Form
 
   - Get simple form to display - task title, task date, and submit button
+  - useState to manage form data
+    - on the form inputs, need to add a value and onChange property. value is whatever user types in and captured into the variable data. onChange, a controlled component will fire when there is data in the value property. onChange will directly call setTitle and setDay to update the state.
+    - You can check this is working on React Dev Tools, see state data get updated with user inserts text in the input value
