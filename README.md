@@ -60,7 +60,7 @@ readme.md, .gitignore, bootstrap, sass
   - Include form validation
   - Add task title and date and check that the data console log correctly.
   - Update handleAddTask method to add the new task in the state
-    - React will create a unique key id for the new task? I guess not.
+    - Need to create a unique key id for the new task
     - Use spread operator to add in the new Task
 
 #### Add Feature - Toggle Add Form
@@ -115,3 +115,5 @@ readme.md, .gitignore, bootstrap, sass
 
   - Mockup backend
   - `npm i json-server`
+  - add script in package.json to server the json server
+  - `npm run start` runs app and `npm run server` runs the server and creates db.json file, which will be where your app data will be
