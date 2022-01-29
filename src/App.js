@@ -60,7 +60,9 @@ function App() {
             onToggleCompleted={handleToggleCompleted}
           />
         ) : (
-          "Hooray you have no more tasks."
+          <p className="no-tasks-msg text-center">
+            Hooray you have no more tasks.
+          </p>
         )}
       </main>
     </div>

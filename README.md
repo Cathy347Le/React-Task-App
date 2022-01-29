@@ -40,6 +40,8 @@ readme.md, .gitignore, bootstrap, sass
     };
     ```
     - Conditional render: add a message when there are no more tasks
+    - If you wanted to do inline stlying
+      `<p className="no-tasks-msg" style={{ textAlign: "center" }}>`
 - Add a completed functionality
 
   - Create handleToggleCompleted and onToggleCompleted and console.log the event and id
