@@ -32,6 +32,7 @@ function App() {
 
   const handleToggleCompleted = (id) => {
     // console.log("test toggle", id);
+    // Make sure correct task item is targeted (id match check), if id matches, copy the task (...), but change the completed property to the opposite. Otherwise no change.
     setTasks(
       tasks.map((task) =>
         task.id === id ? { ...task, completed: !task.completed } : task
