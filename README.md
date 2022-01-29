@@ -126,4 +126,4 @@ https://www.npmjs.com/package/json-server
 
 - Get task to show on task app, need useEffect
   - useEffect because you want something to happen when the app loads
-  - Create a fetchTasks method inside useEffect to use Fetch the server url and console the data
+  - Create a fetchTasks method inside useEffect to use Fetch the server url and console the data (make sure plumbing is correct)
