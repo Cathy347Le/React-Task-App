@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./Components/Header";
 import TaskList from "./Components/TaskList";
 import AddTask from "./Components/AddTask";
@@ -71,29 +71,30 @@ function App() {
           onAddTaskButtonToggle={showAddTaskForm}
         />
         <main>
-          <Route
-            path="/"
-            exact
-            render={(props) => (
-              <>
-                {showAddTaskForm && <AddTask onAddTask={handleAddTask} />}
-                {tasks.length > 0 ? (
-                  <TaskList
-                    tasks={tasks}
-                    onDelete={handleDelete}
-                    onToggleCompleted={handleToggleCompleted}
-                    onDeleteAllTask={handleDeleteAllTask}
-                  />
-                ) : (
-                  <p className="no-tasks-msg text-center">
-                    Hooray you have no more tasks.
-                  </p>
-                )}
-              </>
-            )}
-          />
-          <Route path="/About" component={About} />
-          <Route path="/Notes" component={Notes} />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  {showAddTaskForm && <AddTask onAddTask={handleAddTask} />}
+                  {tasks.length > 0 ? (
+                    <TaskList
+                      tasks={tasks}
+                      onDelete={handleDelete}
+                      onToggleCompleted={handleToggleCompleted}
+                      onDeleteAllTask={handleDeleteAllTask}
+                    />
+                  ) : (
+                    <p className="no-tasks-msg text-center">
+                      Hooray you have no more tasks.
+                    </p>
+                  )}
+                </>
+              }
+            />
+            <Route path="/About" element={<About />} />
+            <Route path="/Notes" element={<Notes />} />
+          </Routes>
         </main>
       </div>
     </Router>

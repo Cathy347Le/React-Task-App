@@ -99,6 +99,7 @@ readme.md, .gitignore, bootstrap, sass
 
 - Stable version released in early Jan. Updating to version 6 will break your React app
 - Install `npm i react-router-dom@6`
+- Wrap <Route> with <Routes>. Replace component={About} with element={<About/>} which takes JSX nw
 
 - Common differences are:
   - <Switch> doesn’t exist anymore. Replaced with <Routes> and you have to wrap your routes with <Routes>
