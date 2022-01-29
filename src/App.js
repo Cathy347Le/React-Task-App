@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./Components/Header";
 import TaskList from "./Components/TaskList";
@@ -10,6 +10,25 @@ import "./App.scss";
 function App() {
   const [showAddTaskForm, setShowAddTaskForm] = useState(false);
   const [tasks, setTasks] = useState([]);
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      const res = await fetch("http://localhost:5000/tasks");
+      const data = await res.json();
+
+      console.log(data);
+    };
+
+    fetchTasks();
+  }, []);
+
+  //FETCH & PROMISE
+  // useEffect(() => {
+  //   const url = "http://localhost:5000/tasks";
+  //   fetch(url)
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // },[]);
 
   const handleShowAddTaskForm = () => {
     setShowAddTaskForm(!showAddTaskForm);

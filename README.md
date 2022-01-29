@@ -109,15 +109,21 @@ readme.md, .gitignore, bootstrap, sass
   - Only <Route> are allowed in <Routes>. No other children tags are allowed
   - Redirect replaced with Navigate and useHistory is now useNavigate
 
-  ### JSON server
+### JSON server
 
-  https://www.npmjs.com/package/json-server
+https://www.npmjs.com/package/json-server
 
-  - Mockup backend
-  - `npm i json-server`
-  - Add script in package.json to server the json server
-  - `npm run start` runs app and `npm run server` runs the server and creates db.json file, which will be where your app data will be
-  - Update db.json with your data. Remove the data in app.js and set the useState into an empty array.
-  - In db.json file, need to change it to JSON objects. Aka keys need to be strings.
-    - Removing the data- cause your app to show no task
-    - For new task items, backend will automatically create ids for you.
+- Mockup backend
+- `npm i json-server`
+- Add script in package.json to server the json server
+- `npm run start` runs app and `npm run server` runs the server and creates db.json file, which will be where your app data will be
+- Update db.json with your data. Remove the data in app.js and set the useState into an empty array.
+- In db.json file, need to change it to JSON objects. Aka keys need to be strings.
+
+  - Removing the data- cause your app to show no task
+  - For new task items, backend will automatically create ids for you.
+  - Once db.json file is complete, you go to port 5000/tasks to see your data!
+
+- Get task to show on task app, need useEffect
+  - useEffect because you want something to happen when the app loads
+  - Create a fetchTasks method inside useEffect to use Fetch the server url and console the data
