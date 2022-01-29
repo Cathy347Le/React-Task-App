@@ -49,7 +49,7 @@ function App() {
     });
 
     //Update the frontend
-    const data = res.json();
+    const data = await res.json();
     setTasks([...tasks, data]);
   };
 
