@@ -48,6 +48,11 @@ readme.md, .gitignore, bootstrap, sass
   ### Add New Task Form
 
   - Get simple form to display - task title, task date, and submit button
-  - useState to manage form data
+  - useState to manage form data. Set completed property to default to false.
     - on the form inputs, need to add a value and onChange property. value is whatever user types in and captured into the variable data. onChange, a controlled component will fire when there is data in the value property. onChange will directly call setTitle and setDay to update the state.
     - You can check this is working on React Dev Tools, see state data get updated with user inserts text in the input value
+
+- Add New Task when submit button is clicked, done on App.js where state is managed. handleAddTask and onAddTask and onSubmit
+  - Include form validation
+  - Add task title and date and check that the data console log correctly.
+  - Update handleAddTask method to add the new task in the state

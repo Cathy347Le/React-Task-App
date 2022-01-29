@@ -26,6 +26,10 @@ function App() {
     },
   ]);
 
+  const handleAddTask = (task) => {
+    console.log(task);
+  };
+
   const handleDelete = (id) => {
     // console.log("test delete", id);
     setTasks(tasks.filter((task) => task.id !== id));
@@ -45,7 +49,7 @@ function App() {
     <div className="App">
       <Header name="Cathy" />
       <main>
-        <AddTask />
+        <AddTask onAddTask={handleAddTask} />
         {tasks.length > 0 ? (
           <TaskList
             tasks={tasks}
