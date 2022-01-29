@@ -88,4 +88,7 @@ readme.md, .gitignore, bootstrap, sass
 - Add `import { BrowserRouter as Router, Route } from "react-router-dom";` in app.js
 - Add About and Notes page component
 - In app.js wrap everything in <Router></Router> and then add your Route paths
-- To bypass page reload, replace anchor links with <Link> component
+- To bypass page reload, replace anchor links with <Link> component in NavBar.js
+- Make Add New Task Button only appear on the homepage (not About or Notes page)
+  - useLocation from react-router-dom in header.js
+  - useLocation gives you access to useLocation.pathname (renamed to location)
