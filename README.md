@@ -80,3 +80,8 @@ readme.md, .gitignore, bootstrap, sass
 - Reuse button component and create methods handleDeleteAllTask and onDeleteAllTask
 - Console.log method to check plumbing
 - update handleDeleteAllTask to clear all the tasks `setTasks(tasks.length === 0);`
+
+#### Routing
+
+- Install react-router old version , not v6 `npm i react-router-dom@5.2.0`
+- Add a NavBar in the header component
