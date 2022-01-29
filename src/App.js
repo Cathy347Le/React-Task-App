@@ -104,7 +104,7 @@ function App() {
     //Update the frontend
     setTasks(
       tasks.map((task) =>
-        task.id === id ? { ...task, completed: !data.completed } : task
+        task.id === id ? { ...task, completed: data.completed } : task
       )
     );
   };

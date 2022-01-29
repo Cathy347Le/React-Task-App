@@ -145,12 +145,22 @@ https://www.npmjs.com/package/json-server
   - No need to create a unique ID for the new task = server automatically does that
   - fetch the server, make a POST request (add method, headers, and body). Also make the update on the frontend using setTasks which includes the new task
 
-BUG
+BUG in handleAddTask
 
 - Adding in the task via the add Task form does not render correctly on the frontend. Works okay on the server side, which you can tell when you refresh the app. Something is wrong on the fronend side. const data is suppose to set to await. Remember asynchronous calls!
 
 - Update Completed on the server
   - Need to fetch the correct task (create fetchSingleTask), change the completed property and make a PUT request to change the task in the server.
 
-BUG
+BUG in handleToggleCompleted method
 -Server is updating correctly, but not frontend
+
+```
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, completed: data.completed } : task
+      )
+    );
+```
+
+- Once the change to server is made, you just want to pass that data as is into setTasks, so remove the "!"

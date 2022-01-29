@@ -1,21 +1,15 @@
 {
   "tasks": [
     {
-      "title": "Brush Gouda",
-      "date": "Sunday",
-      "completed": true,
-      "id": 3
-    },
-    {
       "title": "Water plants",
       "date": "Sunday",
-      "completed": false,
+      "completed": true,
       "id": 6
     },
     {
       "title": "Set dining table",
       "date": "Saturday",
-      "completed": false,
+      "completed": true,
       "id": 7
     },
     {
