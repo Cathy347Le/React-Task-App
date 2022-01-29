@@ -83,5 +83,4 @@ readme.md, .gitignore, bootstrap, sass
 
 #### Routing
 
-- Install react-router old version , not v6 `npm i react-router-dom@5.2.0`
-- Add a NavBar in the header component
+- No routing on this repo. Check routing v5 or v6 branch
