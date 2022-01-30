@@ -12,7 +12,7 @@ function TaskList({ tasks, onDelete, onToggleCompleted, onDeleteAllTask }) {
           onToggleCompleted={onToggleCompleted}
         />
       ))}
-      <Button text="Delete All Task" onClick={onDeleteAllTask} />
+      <Button text="Delete All Task" onClick={() => onDeleteAllTask(tasks)} />
     </div>
   );
 }

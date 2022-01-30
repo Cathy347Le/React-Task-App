@@ -76,9 +76,22 @@ function App() {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
-  const handleDeleteAllTask = () => {
-    // console.log(tasks);
-    // console.log(tasks.length);
+  // const handleDeleteAllTask = () => {
+  //   // console.log(tasks);
+  //   // console.log(tasks.length);
+  //   setTasks(tasks.length === 0);
+  // };
+
+  const handleDeleteAllTask = async (tasks) => {
+    const getTaskIDs = await tasks.map((task) => task.id);
+    // console.log("delete all", getTaskIDs);
+
+    await getTaskIDs.forEach((id) => {
+      fetch(`http://localhost:5000/tasks/${id}`, {
+        method: "DELETE",
+      });
+    });
+
     setTasks(tasks.length === 0);
   };
 

@@ -164,3 +164,6 @@ BUG in handleToggleCompleted method
 ```
 
 - Once the change to server is made, you just want to pass that data as is into setTasks, so remove the "!"
+
+- Delete all Tasks
+  - Captured all the task ids, loop through ids and then ran the delete request multiple times. On the frontend side, change tasks.length to 0.
