@@ -39,7 +39,10 @@ function Task({ task, onDelete, onToggleCompleted }) {
           />
         )}
       </p>
-      <Link to={`/task/${task.id}`}> Show More Details</Link>
+      <Link style={{ fontSize: "12px" }} to={`/task/${task.id}`}>
+        {" "}
+        Show More Details
+      </Link>
     </div>
   );
 }
