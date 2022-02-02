@@ -17,6 +17,12 @@
       "title": "Wash dishes",
       "date": "Friday",
       "completed": false
+    },
+    {
+      "title": "Clean Gouda's hair",
+      "date": "Friday",
+      "completed": false,
+      "id": 4
     }
   ]
 }
