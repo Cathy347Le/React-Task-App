@@ -169,9 +169,11 @@ BUG in handleToggleCompleted method
 
   - Captured all the task ids, loop through ids and then ran the delete request multiple times. On the frontend side, change tasks.length to 0.
 
-#### ADD SHOW DETAILS
+#### ADD TASK DETAILS COMPONENT
 
 - Create Task Details component
 - Get Show Details Link to show on task component `<Link to={`/task/${task.id}`}>`
 - Set up route to that single task by ID on app.js `/task:id`
 - Once plumbing is setup, update Task Details component
+  - When building a component that requires React Router and Backend Server...
+  -

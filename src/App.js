@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./Components/Header";
 import TaskList from "./Components/TaskList";
 import AddTask from "./Components/AddTask";
-import About from "./Components/About";
-import Notes from "./Components/Notes";
+import About from "./Components/Pages/About";
+import Notes from "./Components/Pages/Notes";
 import TaskDetails from "./Components/TaskDetails";
 import "./App.scss";
 
