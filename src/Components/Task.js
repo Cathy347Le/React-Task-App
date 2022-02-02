@@ -1,4 +1,5 @@
 import { FaTimes, FaTimesCircle, FaCheckCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Task({ task, onDelete, onToggleCompleted }) {
   // RENDERING CLASSES DYNAMICALLY
@@ -38,6 +39,7 @@ function Task({ task, onDelete, onToggleCompleted }) {
           />
         )}
       </p>
+      <Link to={`/task/${task.id}`}> Show More Details</Link>
     </div>
   );
 }

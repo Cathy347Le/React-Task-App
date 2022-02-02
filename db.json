@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Vaccum",
       "date": "Saturday",
-      "completed": false
+      "completed": true
     },
     {
       "id": 2,

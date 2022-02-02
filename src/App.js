@@ -5,6 +5,7 @@ import TaskList from "./Components/TaskList";
 import AddTask from "./Components/AddTask";
 import About from "./Components/About";
 import Notes from "./Components/Notes";
+import TaskDetails from "./Components/TaskDetails";
 import "./App.scss";
 
 function App() {
@@ -162,6 +163,8 @@ function App() {
                 </>
               }
             />
+
+            <Route path="/task/:id" element={<TaskDetails />} />
             <Route path="/About" element={<About />} />
             <Route path="/Notes" element={<Notes />} />
           </Routes>
