@@ -175,5 +175,7 @@ BUG in handleToggleCompleted method
 - Get Show Details Link to show on task component `<Link to={`/task/${task.id}`}>`
 - Set up route to that single task by ID on app.js `/task:id`
 - Once plumbing is setup, update Task Details component
+  - Import useState and useEffect
   - When building a component that requires React Router and Backend Server...
-  -
+  - you need 3 useState - error, isLoaded, and tasks
+  - console.log(data) and make sure it renders once when page loads... set the dependency array to an empty array
