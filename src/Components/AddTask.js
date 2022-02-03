@@ -51,7 +51,7 @@ function AddTask({ onAddTask }) {
       </div> */}
       <div className="form-ctrl dropdown">
         <label htmlFor="date">Day:</label>
-        <select id="date" name="date">
+        <select id="date" name="task_date">
           <option value="monday">Monday</option>
           <option value="tuesday">Tuesday</option>
           <option value="wednesday">Wednesday</option>
