@@ -1,15 +1,9 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "title": "Vaccum",
-      "date": "Saturday",
-      "completed": true
-    },
-    {
       "title": "Paint Shelves",
       "date": "Monday",
-      "completed": false,
+      "completed": true,
       "id": 4
     },
     {
@@ -35,12 +29,6 @@
       "date": "Thursday",
       "completed": false,
       "id": 8
-    },
-    {
-      "title": "Work on Leetcode",
-      "date": "Monday",
-      "completed": false,
-      "id": 9
     }
   ]
 }
