@@ -183,4 +183,5 @@ BUG in handleToggleCompleted method
 #### Make Date Editable (dropdown)
 
 - Update Add Task Form - input date field
-- Create new labal and input field
+- Create new label and input fields and style it
+- Do a add task test - console new task with dropdown feature
