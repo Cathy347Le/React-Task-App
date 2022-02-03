@@ -20,11 +20,32 @@ function App() {
     getTasks();
   }, []);
 
+  // const fetchTasks = async () => {
+  //   const res = await fetch("http://localhost:5000/tasks");
+  //   const data = await res.json();
+  //   // console.log(data);
+  //   return data;
+  // };
+
   const fetchTasks = async () => {
     const res = await fetch("http://localhost:5000/tasks");
     const data = await res.json();
     // console.log(data);
-    return data;
+    const sorter = {
+      Monday: 1,
+      Tuesday: 2,
+      Wednesday: 3,
+      Thursday: 4,
+      Friday: 5,
+      Saturday: 6,
+      Sunday: 7,
+    };
+
+    const sortedData = await data.sort((a, b) => {
+      return sorter[a.date] - sorter[b.date];
+    });
+    // console.log(sortedData);
+    return sortedData;
   };
 
   const fetchSingleTask = async (id) => {
@@ -58,7 +79,7 @@ function App() {
 
     //Update the frontend
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
     setTasks([...tasks, data]);
   };
 
@@ -146,6 +167,17 @@ function App() {
           <Routes>
             <Route
               path="/"
+              //   <div className="task-list-container">
+              //   {tasks.map((task) => (
+              //     <Task
+              //       key={task.id}
+              //       task={task}
+              //       onDelete={onDelete}
+              //       onToggleCompleted={onToggleCompleted}
+              //     />
+              //   ))}
+              // </div>
+
               element={
                 <>
                   {showAddTaskForm && <AddTask onAddTask={handleAddTask} />}

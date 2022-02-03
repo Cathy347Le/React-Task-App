@@ -186,3 +186,9 @@ BUG in handleToggleCompleted method
 - Create new label and input fields and style it
 - To test the addTask form before submiting, you can use reactDevTools to see if the state changes in AddTask component. No need to console.log it.
 - Update select field attributes with the help of reactJS docs
+
+#### Display tasks sorted by Date
+
+- Practice on replit https://replit.com/@Cathy347Le/Array-Iterating-Methods#index.js
+- Console.log data and sortedData
+- Tasks now sorted by date when loaded. Need to also sort when a new Task is added.

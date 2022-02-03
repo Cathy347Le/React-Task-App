@@ -17,6 +17,12 @@
       "date": "Thursday",
       "completed": false,
       "id": 3
+    },
+    {
+      "title": "Paint Shelves",
+      "date": "Monday",
+      "completed": false,
+      "id": 4
     }
   ]
 }
