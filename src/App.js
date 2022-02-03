@@ -18,7 +18,7 @@ function App() {
       setTasks(tasksFromServer);
     };
     getTasks();
-  }, []);
+  }, [tasks]);
 
   // const fetchTasks = async () => {
   //   const res = await fetch("http://localhost:5000/tasks");
@@ -31,6 +31,12 @@ function App() {
     const res = await fetch("http://localhost:5000/tasks");
     const data = await res.json();
     // console.log(data);
+    const sortedData = await sortTasksByDay(data);
+    // console.log(sortedData);
+    return sortedData;
+  };
+
+  const sortTasksByDay = async (tasks) => {
     const sorter = {
       Monday: 1,
       Tuesday: 2,
@@ -41,10 +47,10 @@ function App() {
       Sunday: 7,
     };
 
-    const sortedData = await data.sort((a, b) => {
+    const sortedData = await tasks.sort((a, b) => {
       return sorter[a.date] - sorter[b.date];
     });
-    // console.log(sortedData);
+
     return sortedData;
   };
 

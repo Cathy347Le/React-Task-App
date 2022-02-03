@@ -7,22 +7,40 @@
       "completed": true
     },
     {
-      "id": 2,
-      "title": "Hang floating shelves",
-      "date": "Friday",
-      "completed": false
-    },
-    {
-      "title": "Clean Gouda's ear",
-      "date": "Thursday",
-      "completed": false,
-      "id": 3
-    },
-    {
       "title": "Paint Shelves",
       "date": "Monday",
       "completed": false,
       "id": 4
+    },
+    {
+      "title": "Laundry",
+      "date": "Tuesday",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "title": "Walk Gouda",
+      "date": "Friday",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "title": "Water plants",
+      "date": "Wednesday",
+      "completed": false,
+      "id": 7
+    },
+    {
+      "title": "Call parents",
+      "date": "Thursday",
+      "completed": false,
+      "id": 8
+    },
+    {
+      "title": "Work on Leetcode",
+      "date": "Monday",
+      "completed": false,
+      "id": 9
     }
   ]
 }

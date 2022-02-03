@@ -192,3 +192,5 @@ BUG in handleToggleCompleted method
 - Practice on replit https://replit.com/@Cathy347Le/Array-Iterating-Methods#index.js
 - Console.log data and sortedData
 - Tasks now sorted by date when loaded. Need to also sort when a new Task is added.
+  - Make it reuseable - so you can add the sorted function to fetchTasks and ~~handleAddTasks~~
+    - NOTE: I don't need to add the sorted fucntion to handleAddTasks, can you can add `tasks` in the useEffect in the dependency array. It'll sort it everytime tasks gets updated.
