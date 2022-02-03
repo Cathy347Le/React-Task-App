@@ -58,6 +58,7 @@ function App() {
 
     //Update the frontend
     const data = await res.json();
+    console.log(data);
     setTasks([...tasks, data]);
   };
 
