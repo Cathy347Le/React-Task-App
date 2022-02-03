@@ -172,7 +172,7 @@ BUG in handleToggleCompleted method
 #### ADD TASK DETAILS COMPONENT
 
 - Create Task Details component
-- Get Show Details Link to show on task component `<Link to={`/task/${task.id}`}>`
+- Get Show Details Link to show on task component `<Link to={\`/task/${task.id}\`}>`
 - Set up route to that single task by ID on app.js `/task:id`
 - Once plumbing is setup, update Task Details component
   - Import useState and useEffect
@@ -193,4 +193,4 @@ BUG in handleToggleCompleted method
 - Console.log data and sortedData
 - Tasks now sorted by date when loaded. Need to also sort when a new Task is added.
   - Make it reuseable - so you can add the sorted function to fetchTasks and ~~handleAddTasks~~
-    - NOTE: I don't need to add the sorted fucntion to handleAddTasks, can you can add `tasks` in the useEffect in the dependency array. It'll sort it everytime tasks gets updated.
+    - **NOTE**: I don't need to add the sorted fucntion to handleAddTasks, I just need to add `tasks` in the useEffect in the dependency array. It'll sort it everytime tasks gets updated.
