@@ -3,6 +3,16 @@ form {
   margin: auto;
   .form-ctrl {
     width: 100%;
+    &.dropdown {
+      label,
+      select {
+        display: inline;
+      }
+      select {
+        margin-left: 22px;
+        height: 30px;
+      }
+    }
   }
   label {
     display: block;
@@ -10,6 +20,8 @@ form {
     input {
       margin-left: 16px;
       width: 85%;
+      padding: 5px;
+      max-height: 30px;
     }
     input#title {
       margin-left: 18px;

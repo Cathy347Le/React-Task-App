@@ -37,7 +37,7 @@ function AddTask({ onAddTask }) {
           />
         </label>
       </div>
-      <div className="form-ctrl">
+      {/* <div className="form-ctrl">
         <label htmlFor="date">
           Date:
           <input
@@ -48,6 +48,18 @@ function AddTask({ onAddTask }) {
             onChange={(e) => setDate(e.target.value)}
           />
         </label>
+      </div> */}
+      <div className="form-ctrl dropdown">
+        <label for="date">Day:</label>
+        <select id="date" name="date">
+          <option value="monday">Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday">Friday</option>
+          <option value="saturday">Saturday</option>
+          <option value="sunday">Sunday</option>
+        </select>
       </div>
       <input className="form-button" type="submit" value="Add New Task" />
     </form>
