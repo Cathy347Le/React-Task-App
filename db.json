@@ -1,34 +1,28 @@
 {
   "tasks": [
     {
-      "title": "Paint Shelves",
-      "date": "Monday",
-      "completed": true,
-      "id": 4
-    },
-    {
       "title": "Laundry",
       "date": "Tuesday",
       "completed": false,
       "id": 5
     },
     {
-      "title": "Walk Gouda",
-      "date": "Friday",
+      "title": "Brush Gouda",
+      "date": "Tuesday",
       "completed": false,
-      "id": 6
+      "id": 9
     },
     {
-      "title": "Water plants",
-      "date": "Wednesday",
+      "title": "Bath Gouda",
+      "date": "Sunday",
       "completed": false,
-      "id": 7
+      "id": 10
     },
     {
-      "title": "Call parents",
-      "date": "Thursday",
+      "title": "Prep for Interview",
+      "date": "Monday",
       "completed": false,
-      "id": 8
+      "id": 11
     }
   ]
 }

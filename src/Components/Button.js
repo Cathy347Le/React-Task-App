@@ -1,5 +1,5 @@
-import React from "react";
-import "./Button.scss";
+import React from 'react';
+import './Button.scss';
 
 function Button({ color, text, onClick }) {
   return (
@@ -10,8 +10,8 @@ function Button({ color, text, onClick }) {
 }
 
 Button.defaultProps = {
-  color: "#4b7bec",
-  text: "Need Button Text",
+  color: '#4b7bec',
+  text: 'Need Button Text',
 };
 
 export default Button;

@@ -193,6 +193,7 @@ BUG in handleToggleCompleted method
 - Console.log data and sortedData
 - Tasks now sorted by date when loaded. Need to also sort when a new Task is added.
   - Make it reuseable - so you can add the sorted function to fetchTasks and ~~handleAddTasks~~
-    - **NOTE**: I don't need to add the sorted fucntion to handleAddTasks, I just need to add `tasks` in the useEffect in the dependency array. It'll sort it everytime tasks gets updated.
+    - ~~**NOTE**: I don't need to add the sorted fucntion to handleAddTasks, I just need to add `tasks` in the useEffect in the dependency array. It'll sort it everytime tasks gets updated.~~
+    - **NOTE** Idea above it wrong, since I noticed the server making infinite get request loops. I updated the handleAddTasks to setTasks(sortedData)
 
 ### ADD BACKEND - Node, MongoDB, moongoose

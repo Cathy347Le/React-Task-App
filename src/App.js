@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./Components/Header";
-import TaskList from "./Components/TaskList";
-import AddTask from "./Components/AddTask";
-import About from "./Components/Pages/About";
-import Notes from "./Components/Pages/Notes";
-import TaskDetails from "./Components/TaskDetails";
-import "./App.scss";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './Components/Header';
+import TaskList from './Components/TaskList';
+import AddTask from './Components/AddTask';
+import About from './Components/Pages/About';
+import Notes from './Components/Pages/Notes';
+import TaskDetails from './Components/TaskDetails';
+import './App.scss';
 
 function App() {
   const [showAddTaskForm, setShowAddTaskForm] = useState(false);
@@ -18,7 +18,7 @@ function App() {
       setTasks(tasksFromServer);
     };
     getTasks();
-  }, [tasks]);
+  }, []);
 
   // const fetchTasks = async () => {
   //   const res = await fetch("http://localhost:5000/tasks");
@@ -28,7 +28,7 @@ function App() {
   // };
 
   const fetchTasks = async () => {
-    const res = await fetch("http://localhost:5000/tasks");
+    const res = await fetch('http://localhost:5000/tasks');
     const data = await res.json();
     // console.log(data);
     const sortedData = await sortTasksByDay(data);
@@ -75,10 +75,10 @@ function App() {
 
   const handleAddTask = async (task) => {
     //POST request to the server
-    const res = await fetch("http://localhost:5000/tasks", {
-      method: "POST",
+    const res = await fetch('http://localhost:5000/tasks', {
+      method: 'POST',
       headers: {
-        "Content-type": "application/json",
+        'Content-type': 'application/json',
       },
       body: JSON.stringify(task),
     });
@@ -86,7 +86,9 @@ function App() {
     //Update the frontend
     const data = await res.json();
     // console.log(data);
-    setTasks([...tasks, data]);
+    const sortedData = await sortTasksByDay([...tasks, data]);
+    // console.log(sortedData);
+    setTasks(sortedData);
   };
 
   // const handleAddTask = (task) => {
@@ -99,7 +101,7 @@ function App() {
   const handleDelete = async (id) => {
     // console.log("test delete", id);
     await fetch(`http://localhost:5000/tasks/${id}`, {
-      method: "DELETE",
+      method: 'DELETE',
     });
 
     setTasks(tasks.filter((task) => task.id !== id));
@@ -117,7 +119,7 @@ function App() {
 
     await getTaskIDs.forEach((id) => {
       fetch(`http://localhost:5000/tasks/${id}`, {
-        method: "DELETE",
+        method: 'DELETE',
       });
     });
 
@@ -134,9 +136,9 @@ function App() {
 
     //PUT request to the server
     const res = await fetch(`http://localhost:5000/tasks/${id}`, {
-      method: "PUT",
+      method: 'PUT',
       headers: {
-        "Content-type": "application/json",
+        'Content-type': 'application/json',
       },
       body: JSON.stringify(updatedTask),
     });
