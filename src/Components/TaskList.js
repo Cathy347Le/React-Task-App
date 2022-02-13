@@ -1,5 +1,5 @@
-import Task from "./Task";
-import Button from "./Button";
+import Task from './Task';
+import Button from './Button';
 
 function TaskList({ tasks, onDelete, onToggleCompleted, onDeleteAllTask }) {
   return (

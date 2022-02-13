@@ -196,4 +196,8 @@ BUG in handleToggleCompleted method
     - ~~**NOTE**: I don't need to add the sorted fucntion to handleAddTasks, I just need to add `tasks` in the useEffect in the dependency array. It'll sort it everytime tasks gets updated.~~
     - **NOTE** Idea above it wrong, since I noticed the server making infinite get request loops. I updated the handleAddTasks to setTasks(sortedData)
 
+#### Track the number of tasks remaining
+
+- Display a static counter in the header
+
 ### ADD BACKEND - Node, MongoDB, moongoose
