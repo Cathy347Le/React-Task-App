@@ -1,28 +1,3 @@
 {
-  "tasks": [
-    {
-      "title": "Laundry",
-      "date": "Tuesday",
-      "completed": false,
-      "id": 5
-    },
-    {
-      "title": "Brush Gouda",
-      "date": "Tuesday",
-      "completed": false,
-      "id": 9
-    },
-    {
-      "title": "Bath Gouda",
-      "date": "Sunday",
-      "completed": false,
-      "id": 10
-    },
-    {
-      "title": "Prep for Interview",
-      "date": "Monday",
-      "completed": false,
-      "id": 11
-    }
-  ]
+  "tasks": []
 }

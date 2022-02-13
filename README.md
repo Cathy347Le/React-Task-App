@@ -199,5 +199,6 @@ BUG in handleToggleCompleted method
 #### Track the number of tasks remaining
 
 - Display a static counter in the header
+- Display task counter dynamically and make it conditionally render
 
 ### ADD BACKEND - Node, MongoDB, moongoose

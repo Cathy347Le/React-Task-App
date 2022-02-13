@@ -170,6 +170,7 @@ function App() {
           name="Cathy"
           onShowAddTaskForm={handleShowAddTaskForm}
           onAddTaskButtonToggle={showAddTaskForm}
+          count={tasks.length}
         />
         <main>
           <Routes>
@@ -198,7 +199,7 @@ function App() {
                     />
                   ) : (
                     <p className="no-tasks-msg text-center">
-                      Hooray you have no more tasks.
+                      Hooray!!! You have no more tasks.
                     </p>
                   )}
                 </>
