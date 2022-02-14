@@ -13,7 +13,7 @@ function Header({ name, onShowAddTaskForm, onAddTaskButtonToggle, count }) {
       {count > 0 && (
         <div className="task-counter my-2">
           <button className="btn btn-success fw-bold pe-none">
-            TASKS REMAINING: <span class="badge bg-dark">{count}</span>
+            TASKS REMAINING: <span className="badge bg-dark">{count}</span>
           </button>
         </div>
       )}
