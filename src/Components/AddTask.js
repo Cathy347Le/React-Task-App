@@ -1,16 +1,23 @@
-import { useState } from "react";
-import "./AddTask.scss";
+import { useState, useEffect } from 'react';
+import './AddTask.scss';
 
 function AddTask({ onAddTask }) {
-  const [title, setTitle] = useState("");
-  const [date, setDate] = useState("");
+  const [title, setTitle] = useState('');
+  const [date, setDate] = useState('');
   const [completed, setCompleted] = useState(false);
+  const [disableSubmit, setDisableSubmit] = useState(true);
+
+  useEffect(() => {
+    title.length > 0 && date.length > 0
+      ? setDisableSubmit(false)
+      : setDisableSubmit(true);
+  }, [title.length, date.length]);
 
   //Have an onSubmit method to do form validation before onAddTask is called.
   const onSubmit = (e) => {
     e.preventDefault(); //Don't want to submit right away, or go to another page. Prevent the default action
     if (!title || !date) {
-      alert("Form requires a title and date");
+      alert('Form requires a title and date');
       return;
     }
 
@@ -18,8 +25,8 @@ function AddTask({ onAddTask }) {
     onAddTask({ title, date, completed });
 
     //After submit button is clicked, clear the form data
-    setTitle("");
-    setDate("");
+    setTitle('');
+    setDate('');
     setCompleted(false);
   };
 
@@ -69,7 +76,12 @@ function AddTask({ onAddTask }) {
           <option value="Sunday">Sunday</option>
         </select>
       </div>
-      <input className="form-button" type="submit" value="Add New Task" />
+      <input
+        className="form-button"
+        type="submit"
+        value="Add New Task"
+        disabled={disableSubmit}
+      />
     </form>
   );
 }

@@ -205,4 +205,10 @@ BUG in handleToggleCompleted method
 
 - When you refresh the browser, you can see the text "Hooray!!! You have no more tasks." for a second. Update the conditional return with a isLoaded state.
 
+#### Learn Testing
+
+- Update addTask component - remove alert.
+- If there is no title or date selected, disable the button
+- Since the status of the button is dependent on the input fields, you need a useEffect
+
 ### ADD BACKEND - Node, MongoDB, moongoose

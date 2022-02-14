@@ -23,6 +23,12 @@
       "date": "Friday",
       "completed": false,
       "id": 6
+    },
+    {
+      "title": "Give Gouda a haircut",
+      "date": "Tuesday",
+      "completed": false,
+      "id": 7
     }
   ]
 }
