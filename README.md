@@ -212,9 +212,12 @@ BUG in handleToggleCompleted method
 - Since the status of the button is dependent on the input fields, you need a useEffect
 
 - SIMPLE TEST in Header.js
+
   - Create-react-app has a test script already built in and will look for filename with test in it
-  - add `npm install --save-dev @testing-library/react @testing-library/jest-dom`
+  - add `npm install --save-dev @testing-library/react @testing-library/jest-dom @testing-library/user-event`
     - This will simulate render a component so you can make queries against it
   - Move test files into a test folder
+
+- TEST AddTask form, submit button is disabled on initial state
 
 ### ADD BACKEND - Node, MongoDB, moongoose
