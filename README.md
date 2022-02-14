@@ -201,4 +201,8 @@ BUG in handleToggleCompleted method
 - Display a static counter in the header
 - Display task counter dynamically and make it conditionally render
 
+#### Update useEffect on App.js
+
+- When you refresh the browser, you can see the text "Hooray!!! You have no more tasks." for a second. Update the conditional return with a isLoaded state.
+
 ### ADD BACKEND - Node, MongoDB, moongoose

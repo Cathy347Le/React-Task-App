@@ -10,12 +10,18 @@ import './App.scss';
 
 function App() {
   const [showAddTaskForm, setShowAddTaskForm] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
     const getTasks = async () => {
       const tasksFromServer = await fetchTasks();
-      setTasks(tasksFromServer);
+      if (tasksFromServer) {
+        setTasks(tasksFromServer);
+        setIsLoaded(true);
+      } else {
+        setIsLoaded(true);
+      }
     };
     getTasks();
   }, []);
@@ -163,7 +169,7 @@ function App() {
   //   );
   // };
 
-  return (
+  return isLoaded ? (
     <Router>
       <div className="App">
         <Header
@@ -213,6 +219,8 @@ function App() {
         </main>
       </div>
     </Router>
+  ) : (
+    <div>Loading...</div>
   );
 }
 
