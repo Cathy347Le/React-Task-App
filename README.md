@@ -211,4 +211,10 @@ BUG in handleToggleCompleted method
 - If there is no title or date selected, disable the button
 - Since the status of the button is dependent on the input fields, you need a useEffect
 
+- SIMPLE TEST in Header.js
+  - Create-react-app has a test script already built in and will look for filename with test in it
+  - add `npm install --save-dev @testing-library/react @testing-library/jest-dom`
+    - This will simulate render a component so you can make queries against it
+  - Move test files into a test folder
+
 ### ADD BACKEND - Node, MongoDB, moongoose
