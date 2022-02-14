@@ -24,10 +24,13 @@ main {
   }
 }
 
-.task-list-container {
-  border: 1px solid black;
-  min-height: 500px;
-  padding: 16px 32px;
+.task-list-wrapper {
+  .task-list-container {
+    border: 1px solid black;
+    min-height: 500px;
+    padding: 16px 32px;
+    margin-bottom: 32px;
+  }
   button {
     display: block;
     margin: auto !important;
