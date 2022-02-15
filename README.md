@@ -222,5 +222,6 @@ BUG in handleToggleCompleted method
   - Move test files into a test folder
 
 - TEST AddTask form, submit button is disabled on initial state
+- Combine both unit test into one test.
 
 ### ADD BACKEND - Node, MongoDB, moongoose
