@@ -186,6 +186,9 @@ BUG in handleToggleCompleted method
 - Create new label and input fields and style it
 - To test the addTask form before submiting, you can use reactDevTools to see if the state changes in AddTask component. No need to console.log it.
 - Update select field attributes with the help of reactJS docs
+- Approach to making the form select a component
+  - https://stackoverflow.com/questions/63948194/how-to-test-select-option-logic-with-react-testing-library
+  - https://codesandbox.io/s/eager-violet-kkw0x?file=/src/Select.js
 
 #### Display tasks sorted by Date
 
