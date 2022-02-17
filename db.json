@@ -1,18 +1,6 @@
 {
   "tasks": [
     {
-      "title": "Plan for Dinner",
-      "date": "Tuesday",
-      "completed": false,
-      "id": 3
-    },
-    {
-      "title": "Go to IKEA",
-      "date": "Friday",
-      "completed": false,
-      "id": 5
-    },
-    {
       "title": "Select pictures for frames",
       "date": "Friday",
       "completed": false,
@@ -29,6 +17,12 @@
       "date": "Thursday",
       "completed": false,
       "id": 8
+    },
+    {
+      "title": "Make Dinner",
+      "date": "Thursday",
+      "completed": false,
+      "id": 9
     }
   ]
 }
