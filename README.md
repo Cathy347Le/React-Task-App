@@ -221,7 +221,8 @@ BUG in handleToggleCompleted method
     - This will simulate render a component so you can make queries against it
   - Move test files into a test folder
 
-- TEST AddTask form, submit button is disabled on initial state
-- Combine both unit test into one test.
+- TEST AddTask form
+  - Submit button is disabled and enabled correctly
+  - Check if added task gets added and task remaining increasing to one
 
 ### ADD BACKEND - Node, MongoDB, moongoose
