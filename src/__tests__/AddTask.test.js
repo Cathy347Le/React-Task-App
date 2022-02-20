@@ -38,25 +38,32 @@ test('submit button should be disabled at initial render and enabled when title 
   expect(screen.getByRole('button', { name: /add new task/i })).toBeEnabled();
 });
 
-test('check askTask form adds new task when submit button is clicked', () => {
-  //Render AskTaskform and TaskList
-  render(
-    <Router>
-      <AddTask />
-      <TaskList
-        tasks={[
-          {
-            title: 'Give Gouda a bath',
-            date: 'Friday',
-            completed: false,
-            id: 8,
-          },
-        ]}
-      />
-    </Router>
-  );
-  //Capture askform title and select date and submit Button
-  //Add userEvent for title, date, and button click
-  //Check Task List for the new Task - search for title and date and reminder icon
-  screen.debug();
-});
+// test('check askTask form adds new task when submit button is clicked', () => {
+//   //Render AskTaskform and TaskList
+//   render(
+//     <Router>
+//       <AddTask onAddTask={handleAddTask} />
+//       <TaskList
+//         tasks={[
+//           {
+//             title: 'Give Gouda a bath',
+//             date: 'Friday',
+//             completed: false,
+//             id: 8,
+//           },
+//         ]}
+//       />
+//     </Router>
+//   );
+
+//   //Capture askform title and select date and submit Button
+//   const formTitle = screen.getByLabelText(/title/i);
+//   const formDate = screen.getByRole('combobox');
+//   const formSubmit = screen.getByRole('button', { name: /add new task/i });
+
+//   //Add userEvent for title, date, and button click
+//   userEvent.type(formTitle, 'Vaccum condo');
+//   userEvent.selectOptions(formDate, 'Sunday');
+//   userEvent.click(formSubmit);
+//   //Check Task List for the new Task - search for title and date and reminder icon
+// });
