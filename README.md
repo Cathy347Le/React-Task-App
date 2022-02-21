@@ -226,8 +226,8 @@ BUG in handleToggleCompleted method
   - Submit button is disabled and enabled correctly
   - Check if added task gets added and task remaining increasing to one (this one is hard to test since I have to import functions and hooks)
 
-- END TO END with Cypress `npm install --save-dev cypress`
-  - Once installed, the command to run it is `npm run cypress open`
+- END TO END with Cypress `npm install -D cypress @testing-library/cypress`
+  - Once installed, the command to run the cypress playground is `npx cypress open`
   - Cypress folder will be created. In command.js - `import "@testing-library/cypress/add-commands"`
   - In Cypress, you have to use FIND not GET
   - Install Testing playground dev tool
