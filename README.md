@@ -232,6 +232,9 @@ BUG in handleToggleCompleted method
 ### ADD BACKEND - Node, MongoDB, moongoose
 
 - Update folder structure - create frontend and backend folder
+- In backend folder, add server.js and install express and nodemon
+- Setup server to listen to port 4000
+- Create backend/data/tasks.js and get backend to display the data
 
 ## LIST OF BUGS
 

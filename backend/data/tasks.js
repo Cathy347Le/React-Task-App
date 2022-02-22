@@ -1,0 +1,22 @@
+const tasks = [
+  {
+    id: 1,
+    title: 'Vaccum',
+    date: 'Saturday',
+    completed: false,
+  },
+  {
+    id: 2,
+    title: 'Hang floating shelves',
+    date: 'Friday',
+    completed: false,
+  },
+  {
+    id: 3,
+    title: 'Wash dishes',
+    date: 'Friday',
+    completed: false,
+  },
+];
+
+module.exports = tasks;
