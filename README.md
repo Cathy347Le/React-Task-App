@@ -235,6 +235,8 @@ BUG in handleToggleCompleted method
 - In backend folder, add server.js and install express and nodemon
 - Setup server to listen to port 4000
 - Create backend/data/tasks.js and get backend to display the data
+- Get frontend to fetch the data from backend. Remember to handle the CORS restrictions. Update the fetchURL.
+- In CORS, we setup a proxy, if not in port 3000, check port 4000
 
 ## LIST OF BUGS
 

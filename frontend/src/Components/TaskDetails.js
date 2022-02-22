@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 function TaskDetails() {
   const [error, setError] = useState(null);
@@ -10,7 +10,7 @@ function TaskDetails() {
 
   useEffect(() => {
     const fetchTask = async () => {
-      const res = await fetch(`http://localhost:5000/tasks/${id}`);
+      const res = await fetch(`/api/tasks/${id}`);
       const data = await res.json();
       if (data) {
         console.log(data);

@@ -34,7 +34,7 @@ function App() {
   // };
 
   const fetchTasks = async () => {
-    const res = await fetch('http://localhost:5000/tasks');
+    const res = await fetch('/api/tasks');
     const data = await res.json();
     // console.log(data);
     const sortedData = await sortTasksByDay(data);
@@ -61,7 +61,7 @@ function App() {
   };
 
   const fetchSingleTask = async (id) => {
-    const res = await fetch(`http://localhost:5000/tasks/${id}`);
+    const res = await fetch(`api/tasks/${id}`);
     const data = await res.json();
     // console.log(data);
     return data;
