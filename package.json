@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node backend/server"
+    "start": "node backend/server",
+    "server": "nodemon backend/server"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,9 @@
   "dependencies": {
     "express": "^4.17.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
   "bugs": {
     "url": "https://github.com/Cathy347Le/react-task-app/issues"
   },
