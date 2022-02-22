@@ -241,6 +241,7 @@ BUG in handleToggleCompleted method
 - Create DB on https://www.mongodb.com/, NPM install mongoose and create DB/connection.js (ignore ENV). Test connection by running the server
 - Model data and seed the data. Task data should show up on MongoDB.
 - Update backend to display data from Mongo. Setup task routes. You can check for success if the port 4000 displays the correct IDs
+- Check routes on Postman
 
 ## LIST OF BUGS
 

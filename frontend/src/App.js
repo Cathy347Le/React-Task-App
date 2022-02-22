@@ -26,13 +26,6 @@ function App() {
     getTasks();
   }, []);
 
-  // const fetchTasks = async () => {
-  //   const res = await fetch("http://localhost:5000/tasks");
-  //   const data = await res.json();
-  //   // console.log(data);
-  //   return data;
-  // };
-
   const fetchTasks = async () => {
     const res = await fetch('/api/tasks');
     const data = await res.json();
@@ -185,17 +178,6 @@ function App() {
           <Routes>
             <Route
               path="/"
-              //   <div className="task-list-container">
-              //   {tasks.map((task) => (
-              //     <Task
-              //       key={task.id}
-              //       task={task}
-              //       onDelete={onDelete}
-              //       onToggleCompleted={onToggleCompleted}
-              //     />
-              //   ))}
-              // </div>
-
               element={
                 <>
                   {showAddTaskForm && <AddTask onAddTask={handleAddTask} />}
