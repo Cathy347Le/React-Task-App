@@ -237,7 +237,8 @@ BUG in handleToggleCompleted method
 - Create backend/data/tasks.js and get backend to display the data
 - Get frontend to fetch the data from backend. Remember to handle the CORS restrictions. Update the fetchURL.
 - In CORS, we setup a proxy, if not in port 3000, check port 4000
-- Setup concurrently
+- Setup concurrently and remove cypress
+- Create DB on https://www.mongodb.com/, NPM install mongoose and create DB/connection.js (ignore ENV)
 
 ## LIST OF BUGS
 
