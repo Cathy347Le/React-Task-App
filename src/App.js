@@ -91,10 +91,13 @@ function App() {
 
     //Update the frontend
     const data = await res.json();
-    // console.log(data);
-    const sortedData = await sortTasksByDay([...tasks, data]);
-    // console.log(sortedData);
-    setTasks(sortedData);
+
+    if (tasks.length > 0) {
+      const sortedData = await sortTasksByDay([...tasks, data]);
+      setTasks(sortedData);
+    } else {
+      setTasks([data]);
+    }
   };
 
   // const handleAddTask = (task) => {
@@ -121,7 +124,7 @@ function App() {
 
   const handleDeleteAllTask = async (tasks) => {
     const getTaskIDs = await tasks.map((task) => task.id);
-    // console.log('delete all', getTaskIDs);
+    console.log('delete all', getTaskIDs);
 
     await getTaskIDs.forEach((id) => {
       fetch(`http://localhost:5000/tasks/${id}`, {
@@ -129,7 +132,7 @@ function App() {
       });
     });
 
-    setTasks(tasks.length === 0);
+    setTasks((tasks.length = 0));
   };
 
   const handleToggleCompleted = async (id) => {

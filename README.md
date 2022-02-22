@@ -233,3 +233,8 @@ BUG in handleToggleCompleted method
   - Install Testing playground dev tool
 
 ### ADD BACKEND - Node, MongoDB, moongoose
+
+## LIST OF BUGS
+
+3. SOLVED - New task does not appear on frontend after you click on delete all button
+   Backend is working just fine. It is because, when the tasks list is emptied, you cannot iterate tasks, so the sortTasksByDay function fails. Aka the tasks array is replaced with Hooray!!! You have no more tasks. This was resolved by console.log data, tasks, and tasks.length in the handleAddTask function. You also see the error in the console.
