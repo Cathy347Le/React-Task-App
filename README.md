@@ -239,6 +239,7 @@ BUG in handleToggleCompleted method
 - In CORS, we setup a proxy, if not in port 3000, check port 4000
 - Setup concurrently and remove cypress
 - Create DB on https://www.mongodb.com/, NPM install mongoose and create DB/connection.js (ignore ENV). Test connection by running the server
+- Model data and seed the data. Task data should show up on MongoDB.
 
 ## LIST OF BUGS
 
