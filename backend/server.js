@@ -1,6 +1,6 @@
 const express = require('express');
 const connectDB = require('./db/connection');
-const tasks = require('./data/tasks');
+const taskRoutes = require('./routes/taskRoutes');
 
 connectDB();
 const app = express();
@@ -10,13 +10,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-app.get('/api/tasks', (req, res) => {
-  res.json(tasks);
-});
-
-app.get('/api/tasks/:id', (req, res) => {
-  res.json(tasks.find((p) => p.id == req.params.id));
-});
+app.use('/api/tasks', taskRoutes);
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
