@@ -1,7 +1,10 @@
 const express = require('express');
+const connectDB = require('./db/connection');
+const tasks = require('./data/tasks');
+
+connectDB();
 const app = express();
 const port = 4000;
-const tasks = require('./data/tasks');
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
