@@ -228,7 +228,7 @@ BUG in handleToggleCompleted method
 
 - END TO END with Cypress `npm install -D cypress @testing-library/cypress`
   - Once installed, the command to run the cypress playground is `npx cypress open`
-  - Cypress folder will be created. In command.js - `import "@testing-library/cypress/add-commands"`
+  - Cypress folder will be created. In command.js add `import "@testing-library/cypress/add-commands"` so we can continue to use the same commands in react-testing-library
   - In Cypress, you have to use FIND not GET
   - Install Testing playground dev tool
 

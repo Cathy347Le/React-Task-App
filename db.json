@@ -1,28 +1,10 @@
 {
   "tasks": [
     {
-      "title": "Select pictures for frames",
+      "title": "Water plants",
       "date": "Friday",
       "completed": false,
-      "id": 6
-    },
-    {
-      "title": "Give Gouda a haircut",
-      "date": "Tuesday",
-      "completed": false,
-      "id": 7
-    },
-    {
-      "title": "Give Gouda a bath",
-      "date": "Thursday",
-      "completed": false,
-      "id": 8
-    },
-    {
-      "title": "Make Dinner",
-      "date": "Thursday",
-      "completed": false,
-      "id": 9
+      "id": 1
     }
   ]
 }
