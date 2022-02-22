@@ -141,13 +141,10 @@ https://www.npmjs.com/package/json-server
   - To get your original data back, you will likely need to reload your json data into db.json
 
 - Update Add New Task to the server
+
   - update handleAddTask method to make a POST request
   - No need to create a unique ID for the new task = server automatically does that
   - fetch the server, make a POST request (add method, headers, and body). Also make the update on the frontend using setTasks which includes the new task
-
-BUG in handleAddTask
-
-- Adding in the task via the add Task form does not render correctly on the frontend. Works okay on the server side, which you can tell when you refresh the app. Something is wrong on the fronend side. const data is suppose to set to await. Remember asynchronous calls!
 
 - Update Completed on the server
   - Need to fetch the correct task (create fetchSingleTask), change the completed property and make a PUT request to change the task in the server.
@@ -236,5 +233,9 @@ BUG in handleToggleCompleted method
 
 ## LIST OF BUGS
 
+1. SOLVED - New task does not appear correctly on the frontend
+   Adding in the task via the add Task form does not render correctly on the frontend. Works okay on the server side, which you can tell when you refresh the app. Something is wrong on the frontend side. Const data is suppose to set to await. Remember asynchronous calls!
+2. SOLVED - Toggle not undating correctly on the frontend
+   Once the change to server is made, you just want to pass that data as is into setTasks, so remove the "!"
 3. SOLVED - New task does not appear on frontend after you click on delete all button
    Backend is working just fine. It is because, when the tasks list is emptied, you cannot iterate tasks, so the sortTasksByDay function fails. Aka the tasks array is replaced with Hooray!!! You have no more tasks. This was resolved by console.log data, tasks, and tasks.length in the handleAddTask function. You also see the error in the console.
