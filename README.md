@@ -231,6 +231,8 @@ BUG in handleToggleCompleted method
 
 ### ADD BACKEND - Node, MongoDB, moongoose
 
+- Update folder structure - create frontend and backend folder
+
 ## LIST OF BUGS
 
 1. SOLVED - New task does not appear correctly on the frontend
