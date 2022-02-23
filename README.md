@@ -281,4 +281,6 @@ BUG in handleToggleCompleted method
 
 #### Cypress
 
-- Since you're testing multiple times, add a npm package to make up a diff task title each time
+1. DONE - Since you're testing multiple times, add a npm package to make up a diff task title each time
+
+- `npm install @faker-js/faker --save-dev`

@@ -1,3 +1,5 @@
+import { faker } from '@faker-js/faker';
+
 describe('initial test', () => {
   it('get site to render', () => {
     //Visit and Login if neccessary
@@ -7,7 +9,7 @@ describe('initial test', () => {
     cy.findByRole('button', { name: /add new task/i }).click();
     //Add Title and Date and submit task
     cy.findByRole('textbox', { name: /title:/i }).type(
-      'Scrape ice off freezer'
+      `Call ${faker.name.findName()}`
     );
     cy.findByRole('combobox', { name: /date:/i }).select('Monday');
     cy.findByRole('button', { name: /submit/i }).click();
