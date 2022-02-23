@@ -11,6 +11,9 @@ form {
       select {
         margin-left: 16px;
         height: 30px;
+        padding-inline: 4px;
+        border: 2px solid gray !important;
+        border-radius: 3px;
       }
     }
   }
@@ -20,8 +23,10 @@ form {
     input {
       margin-left: 16px;
       width: 85%;
-      padding: 5px;
+      padding: 5px 8px;
       max-height: 30px;
+      border: 2px solid gray !important;
+      border-radius: 3px;
     }
     input#title {
       margin-left: 18px;
