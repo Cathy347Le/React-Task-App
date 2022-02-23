@@ -26,15 +26,8 @@ function App() {
     getTasks();
   }, []);
 
-  // const fetchTasks = async () => {
-  //   const res = await fetch("http://localhost:5000/tasks");
-  //   const data = await res.json();
-  //   // console.log(data);
-  //   return data;
-  // };
-
   const fetchTasks = async () => {
-    const res = await fetch('http://localhost:5000/tasks');
+    const res = await fetch('/api/tasks');
     const data = await res.json();
     // console.log(data);
     const sortedData = await sortTasksByDay(data);
@@ -61,7 +54,7 @@ function App() {
   };
 
   const fetchSingleTask = async (id) => {
-    const res = await fetch(`http://localhost:5000/tasks/${id}`);
+    const res = await fetch(`api/tasks/${id}`);
     const data = await res.json();
     // console.log(data);
     return data;
@@ -81,7 +74,7 @@ function App() {
 
   const handleAddTask = async (task) => {
     //POST request to the server
-    const res = await fetch('http://localhost:5000/tasks', {
+    const res = await fetch('/api/tasks', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -109,25 +102,19 @@ function App() {
 
   const handleDelete = async (id) => {
     // console.log("test delete", id);
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    await fetch(`/api/tasks/${id}`, {
       method: 'DELETE',
     });
 
-    setTasks(tasks.filter((task) => task.id !== id));
+    setTasks(tasks.filter((task) => task._id !== id));
   };
 
-  // const handleDeleteAllTask = () => {
-  //   // console.log(tasks);
-  //   // console.log(tasks.length);
-  //   setTasks(tasks.length === 0);
-  // };
-
   const handleDeleteAllTask = async (tasks) => {
-    const getTaskIDs = await tasks.map((task) => task.id);
+    const getTaskIDs = await tasks.map((task) => task._id);
     console.log('delete all', getTaskIDs);
 
     await getTaskIDs.forEach((id) => {
-      fetch(`http://localhost:5000/tasks/${id}`, {
+      fetch(`/api/tasks/${id}`, {
         method: 'DELETE',
       });
     });
@@ -144,7 +131,7 @@ function App() {
     };
 
     //PUT request to the server
-    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+    const res = await fetch(`/api/tasks/${id}`, {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',
@@ -157,7 +144,7 @@ function App() {
     //Update the frontend
     setTasks(
       tasks.map((task) =>
-        task.id === id ? { ...task, completed: data.completed } : task
+        task._id === id ? { ...task, completed: data.completed } : task
       )
     );
   };
@@ -185,17 +172,6 @@ function App() {
           <Routes>
             <Route
               path="/"
-              //   <div className="task-list-container">
-              //   {tasks.map((task) => (
-              //     <Task
-              //       key={task.id}
-              //       task={task}
-              //       onDelete={onDelete}
-              //       onToggleCompleted={onToggleCompleted}
-              //     />
-              //   ))}
-              // </div>
-
               element={
                 <>
                   {showAddTaskForm && <AddTask onAddTask={handleAddTask} />}

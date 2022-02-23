@@ -10,7 +10,7 @@ function Header({ name, onShowAddTaskForm, onAddTaskButtonToggle, count }) {
     <header className="app-header">
       <h1>{name}'s Task Tracker</h1>
       <NavBar />
-      {count > 0 && (
+      {location.pathname === '/' && count > 0 && (
         <div className="task-counter my-2">
           <button className="btn btn-success fw-bold pe-none">
             TASKS REMAINING: <span className="badge bg-dark">{count}</span>

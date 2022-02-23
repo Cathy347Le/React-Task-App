@@ -79,7 +79,7 @@ function AddTask({ onAddTask }) {
       <input
         className="form-button"
         type="submit"
-        value="Add New Task"
+        value="Submit"
         disabled={disableSubmit}
       />
     </form>

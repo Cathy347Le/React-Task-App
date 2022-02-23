@@ -231,6 +231,37 @@ BUG in handleToggleCompleted method
 
 ### ADD BACKEND - Node, MongoDB, moongoose
 
+- Update folder structure - create frontend and backend folder
+- In backend folder, add server.js and install express and nodemon
+- Setup server to listen to port 4000
+- Create backend/data/tasks.js and get backend to display the data
+- Get frontend to fetch the data from backend. Remember to handle the CORS restrictions. Update the fetchURL.
+- In CORS, we setup a proxy, if not in port 3000, check port 4000
+- Setup concurrently and remove cypress
+- Create DB on https://www.mongodb.com/, NPM install mongoose and create DB/connection.js (ignore ENV). Test connection by running the server
+- Model data and seed the data. Task data should show up on MongoDB.
+- Update backend to display data from Mongo. Setup task routes. You can check for success if the port 4000 displays the correct IDs
+- Check routes on Postman
+- On frontend, update id field to `_id` so fetch single task works
+
+- UPDATE ADD TASK
+
+  - Install body parser, update post route, and test on Postman
+
+- DELETE TASK
+
+  - On frontend, update id field to `_id` so fetch single task works
+  - Add delete route and check on Postman. use findByIdAndDelete
+
+- UPDATE TOGGLE
+
+  - On frontend, update id field to `_id` so fetch single task works
+  - Add put route and check on Postman. use findByIdAndUpdate
+
+- UPDATE DELETE ALL
+  - On frontend, update id field to `_id` so fetch single task works
+  - No need to update delete route
+
 ## LIST OF BUGS
 
 1. SOLVED - New task does not appear correctly on the frontend
@@ -239,3 +270,18 @@ BUG in handleToggleCompleted method
    Once the change to server is made, you just want to pass that data as is into setTasks, so remove the "!"
 3. SOLVED - New task does not appear on frontend after you click on delete all button
    Backend is working just fine. It is because, when the tasks list is emptied, you cannot iterate tasks, so the sortTasksByDay function fails. Aka the tasks array is replaced with Hooray!!! You have no more tasks. This was resolved by console.log data, tasks, and tasks.length in the handleAddTask function. You also see the error in the console. Updated handleAddTask with an if/else statement.
+
+## IMPROVEMENTS
+
+1. ~~Remove task remaining badge when not on homepage - useLocation from react-router-dom~~
+2. Get server to console each request
+3. Add second way of seeding data
+4. ~~Add env file to remove sensitive data, like MongoDB url and port~~
+
+## TESTING
+
+#### Cypress
+
+1. DONE - Since you're testing multiple times, add a npm package to make up a diff task title each time
+
+- `npm install @faker-js/faker --save-dev`
