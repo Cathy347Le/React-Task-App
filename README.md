@@ -1,8 +1,8 @@
 # React Task Tracker
 
-### Files & Packages to install
+#### Files
 
-readme.md, .gitignore, bootstrap, dotenv, sass
+readme.md, notes.md, .gitignore
 
 ## BRANCHES
 
