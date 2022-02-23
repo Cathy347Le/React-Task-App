@@ -21,7 +21,7 @@ function Task({ task, onDelete, onToggleCompleted }) {
         <FaTimes
           className="close-icon"
           style={{ color: 'red', cursor: 'pointer' }}
-          onClick={() => onDelete(task.id)}
+          onClick={() => onDelete(task._id)}
         />
       </h5>
       <p>{task.date}</p>
@@ -30,12 +30,12 @@ function Task({ task, onDelete, onToggleCompleted }) {
         {task.completed === false ? (
           <FaTimesCircle
             style={{ color: 'red', cursor: 'pointer' }}
-            onClick={() => onToggleCompleted(task.id)}
+            onClick={() => onToggleCompleted(task._id)}
           />
         ) : (
           <FaCheckCircle
             style={{ color: 'green', cursor: 'pointer' }}
-            onClick={() => onToggleCompleted(task.id)}
+            onClick={() => onToggleCompleted(task._id)}
           />
         )}
       </p>

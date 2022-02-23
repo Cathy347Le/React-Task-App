@@ -245,7 +245,12 @@ BUG in handleToggleCompleted method
 - On frontend, update id field to `_id` so fetch single task works
 
 - UPDATE ADD TASK
+
   - Install body parser, update post route, and test on Postman
+
+- DELETE TASK
+  - On frontend, update id field to `_id` so fetch single task works
+  - Add delete route and check on Postman. use findByIdAndDelete
 
 ## LIST OF BUGS
 
@@ -255,4 +260,9 @@ BUG in handleToggleCompleted method
    Once the change to server is made, you just want to pass that data as is into setTasks, so remove the "!"
 3. SOLVED - New task does not appear on frontend after you click on delete all button
    Backend is working just fine. It is because, when the tasks list is emptied, you cannot iterate tasks, so the sortTasksByDay function fails. Aka the tasks array is replaced with Hooray!!! You have no more tasks. This was resolved by console.log data, tasks, and tasks.length in the handleAddTask function. You also see the error in the console. Updated handleAddTask with an if/else statement.
-4. UNSOLVED - Remove Task Remaining on Single Task
+
+## IMPROVEMENTS
+
+1. Remove Task Remaining on Single Task
+2. Get server to console each request
+3. Add second way of seeding data

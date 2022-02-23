@@ -102,18 +102,12 @@ function App() {
 
   const handleDelete = async (id) => {
     // console.log("test delete", id);
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    await fetch(`/api/tasks/${id}`, {
       method: 'DELETE',
     });
 
-    setTasks(tasks.filter((task) => task.id !== id));
+    setTasks(tasks.filter((task) => task._id !== id));
   };
-
-  // const handleDeleteAllTask = () => {
-  //   // console.log(tasks);
-  //   // console.log(tasks.length);
-  //   setTasks(tasks.length === 0);
-  // };
 
   const handleDeleteAllTask = async (tasks) => {
     const getTaskIDs = await tasks.map((task) => task.id);
