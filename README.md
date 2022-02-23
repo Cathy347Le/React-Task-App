@@ -276,3 +276,9 @@ BUG in handleToggleCompleted method
 1. ~~Remove task remaining badge when not on homepage - useLocation from react-router-dom~~
 2. Get server to console each request
 3. Add second way of seeding data
+
+## TESTING
+
+#### Cypress
+
+- Since you're testing multiple times, add a npm package to make up a diff task title each time
