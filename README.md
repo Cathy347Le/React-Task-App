@@ -276,6 +276,7 @@ BUG in handleToggleCompleted method
 1. ~~Remove task remaining badge when not on homepage - useLocation from react-router-dom~~
 2. Get server to console each request
 3. Add second way of seeding data
+4. Add env file to remove sensitive data, like MongoDB url
 
 ## TESTING
 
