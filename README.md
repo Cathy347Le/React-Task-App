@@ -249,8 +249,11 @@ BUG in handleToggleCompleted method
   - Install body parser, update post route, and test on Postman
 
 - DELETE TASK
+
   - On frontend, update id field to `_id` so fetch single task works
   - Add delete route and check on Postman. use findByIdAndDelete
+
+- UPDATE TOGGLE
 
 ## LIST OF BUGS
 

@@ -131,7 +131,7 @@ function App() {
     };
 
     //PUT request to the server
-    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+    const res = await fetch(`/api/tasks/${id}`, {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',
@@ -144,7 +144,7 @@ function App() {
     //Update the frontend
     setTasks(
       tasks.map((task) =>
-        task.id === id ? { ...task, completed: data.completed } : task
+        task._id === id ? { ...task, completed: data.completed } : task
       )
     );
   };
