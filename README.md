@@ -254,8 +254,13 @@ BUG in handleToggleCompleted method
   - Add delete route and check on Postman. use findByIdAndDelete
 
 - UPDATE TOGGLE
+
   - On frontend, update id field to `_id` so fetch single task works
   - Add put route and check on Postman. use findByIdAndUpdate
+
+- UPDATE DELETE ALL
+  - On frontend, update id field to `_id` so fetch single task works
+  - No need to update delete route
 
 ## LIST OF BUGS
 

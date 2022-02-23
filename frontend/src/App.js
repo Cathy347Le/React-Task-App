@@ -110,11 +110,11 @@ function App() {
   };
 
   const handleDeleteAllTask = async (tasks) => {
-    const getTaskIDs = await tasks.map((task) => task.id);
+    const getTaskIDs = await tasks.map((task) => task._id);
     console.log('delete all', getTaskIDs);
 
     await getTaskIDs.forEach((id) => {
-      fetch(`http://localhost:5000/tasks/${id}`, {
+      fetch(`/api/tasks/${id}`, {
         method: 'DELETE',
       });
     });
