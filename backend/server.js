@@ -1,8 +1,10 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const connectDB = require('./db/connection');
 const parser = require('body-parser');
 const taskRoutes = require('./routes/taskRoutes');
 
+dotenv.config();
 connectDB();
 const app = express();
 const port = 4000;
