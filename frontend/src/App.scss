@@ -1,0 +1,63 @@
+.App {
+  text-align: center;
+  margin: 32px 64px;
+}
+
+.app-header {
+  margin-top: 32px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+main {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  margin: auto;
+  .no-tasks-msg {
+    font-size: 20px;
+  }
+}
+
+.task-list-wrapper {
+  .task-list-container {
+    border: 1px solid black;
+    min-height: 500px;
+    padding: 16px 32px;
+    margin-bottom: 32px;
+  }
+  button {
+    display: block;
+    margin: auto !important;
+  }
+}
+
+.task-item {
+  background-color: rgba(209, 216, 224, 0.3);
+  margin-block: 16px;
+  padding: 16px 16px 16px 16px;
+  position: relative;
+  border-left: 5px solid red;
+  .close-icon {
+    position: absolute;
+    right: 16px;
+  }
+  .toggle-completed {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-left: 8px;
+    }
+  }
+  &.completed {
+    border-left-color: green !important;
+  }
+  p {
+    margin-bottom: 0px;
+  }
+}
