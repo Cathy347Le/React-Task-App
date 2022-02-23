@@ -273,6 +273,6 @@ BUG in handleToggleCompleted method
 
 ## IMPROVEMENTS
 
-1. Remove Task Remaining on Single Task
+1. Remove task remaining badge when not on homepage - useLocation from react-router-dom
 2. Get server to console each request
 3. Add second way of seeding data
