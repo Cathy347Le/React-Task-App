@@ -74,7 +74,7 @@ function App() {
 
   const handleAddTask = async (task) => {
     //POST request to the server
-    const res = await fetch('http://localhost:5000/tasks', {
+    const res = await fetch('/api/tasks', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',

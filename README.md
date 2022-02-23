@@ -242,7 +242,10 @@ BUG in handleToggleCompleted method
 - Model data and seed the data. Task data should show up on MongoDB.
 - Update backend to display data from Mongo. Setup task routes. You can check for success if the port 4000 displays the correct IDs
 - Check routes on Postman
-- On frontend, update id field to "\_id" so fetch single task works
+- On frontend, update id field to `_id` so fetch single task works
+
+- UPDATE ADD TASK
+  - Install body parser, update post route, and test on postman
 
 ## LIST OF BUGS
 
