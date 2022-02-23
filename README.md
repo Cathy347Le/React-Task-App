@@ -245,7 +245,7 @@ BUG in handleToggleCompleted method
 - On frontend, update id field to `_id` so fetch single task works
 
 - UPDATE ADD TASK
-  - Install body parser, update post route, and test on postman
+  - Install body parser, update post route, and test on Postman
 
 ## LIST OF BUGS
 
