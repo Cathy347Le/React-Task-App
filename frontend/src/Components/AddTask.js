@@ -5,13 +5,14 @@ function AddTask({ onAddTask }) {
   const [title, setTitle] = useState('');
   const [date, setDate] = useState('');
   const [completed, setCompleted] = useState(false);
-  const [disableSubmit, setDisableSubmit] = useState(true);
 
-  useEffect(() => {
-    title.length > 0 && date.length > 0
-      ? setDisableSubmit(false)
-      : setDisableSubmit(true);
-  }, [title.length, date.length]);
+  //This is not needed
+  // const [disableSubmit, setDisableSubmit] = useState(true);
+  // useEffect(() => {
+  //   title.length > 0 && date.length > 0
+  //     ? setDisableSubmit(false)
+  //     : setDisableSubmit(true);
+  // }, [title.length, date.length]);
 
   //Have an onSubmit method to do form validation before onAddTask is called.
   const onSubmit = (e) => {
@@ -80,7 +81,7 @@ function AddTask({ onAddTask }) {
         className="form-button"
         type="submit"
         value="Submit"
-        disabled={disableSubmit}
+        disabled={title.length === 0 || date.length === 0}
       />
     </form>
   );
