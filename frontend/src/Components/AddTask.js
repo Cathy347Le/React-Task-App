@@ -31,6 +31,16 @@ function AddTask({ onAddTask }) {
     setCompleted(false);
   };
 
+  const daysOfTheWeek = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+  ];
+
   return (
     <form className="add-new-task-form" onSubmit={onSubmit}>
       <div className="form-ctrl">
@@ -68,13 +78,11 @@ function AddTask({ onAddTask }) {
           <option value="" disabled>
             Select Day
           </option>
-          <option value="Monday">Monday</option>
-          <option value="Tuesday">Tuesday</option>
-          <option value="Wednesday">Wednesday</option>
-          <option value="Thursday">Thursday</option>
-          <option value="Friday">Friday</option>
-          <option value="Saturday">Saturday</option>
-          <option value="Sunday">Sunday</option>
+          {daysOfTheWeek.map((day, index) => (
+            <option key={index} value={day}>
+              {day}
+            </option>
+          ))}
         </select>
       </div>
       <input
