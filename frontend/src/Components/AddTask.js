@@ -42,16 +42,31 @@ function AddTask({ onAddTask }) {
   //   'Sunday',
   // ];
 
-  const daysOfTheWeek = [
-    [0, 'Select Day'],
-    [1, 'Monday'],
-    [2, 'Tuesday'],
-    [3, 'Wednesday'],
-    [4, 'Thursday'],
-    [5, 'Friday'],
-    [6, 'Saturday'],
-    [7, 'Sunday'],
-  ];
+  // const daysOfTheWeek = [
+  //   [0, 'Select Day'],
+  //   [1, 'Monday'],
+  //   [2, 'Tuesday'],
+  //   [3, 'Wednesday'],
+  //   [4, 'Thursday'],
+  //   [5, 'Friday'],
+  //   [6, 'Saturday'],
+  //   [7, 'Sunday'],
+  // ];
+
+  const addTaskFormOptions = {
+    id: 'date',
+    name: 'task-date',
+    daysOfTheWeek: [
+      [0, 'Select Day'],
+      [1, 'Monday'],
+      [2, 'Tuesday'],
+      [3, 'Wednesday'],
+      [4, 'Thursday'],
+      [5, 'Friday'],
+      [6, 'Saturday'],
+      [7, 'Sunday'],
+    ],
+  };
 
   // const handleSetDate = (day) => {
   //   console.log(`Selected ${day}`);
@@ -86,23 +101,8 @@ function AddTask({ onAddTask }) {
       </div> */}
       <div className="form-ctrl dropdown">
         <label htmlFor="date">Date:</label>
-        {/* <select
-          id="date"
-          name="task_date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-        >
-          <option value="" disabled>
-            Select Day
-          </option>
-          {daysOfTheWeek.map((day, index) => (
-            <option key={index} value={day}>
-              {day}
-            </option>
-          ))}
-        </select> */}
         <FormSelect
-          options={daysOfTheWeek}
+          formOptions={addTaskFormOptions}
           value={date}
           // onSetDate={handleSetDate}
           onSetDate={(day) => setDate(day)}

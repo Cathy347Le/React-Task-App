@@ -1,19 +1,20 @@
 import React from 'react';
 
 // function FormSelect({ values, callback, disabled = false, readonly = false }) {
-function FormSelect({ options, onSetDate }) {
+function FormSelect({ formOptions, date, onSetDate }) {
+  // console.log(formOptions);
   return (
     <select
-      data-testid="select-option"
-      //   value={date}
-      // onChange={({ target: { value } }) => callback(value)}
+      id={formOptions.id}
+      name={formOptions.name}
+      value={date}
       onChange={(e) => onSetDate(e.target.value)}
     >
-      {options.map(([index, value]) => {
+      {formOptions.daysOfTheWeek.map(([index, value]) => {
         if (index === 0) {
           return (
             <option key={index} value={''}>
-              {value}
+              --{value}--
             </option>
           );
         } else {
