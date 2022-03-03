@@ -30,6 +30,7 @@ readme.md, notes.md, .gitignore
 4. ~~Add env file to remove sensitive data, like MongoDB url and port~~
 5. Update AddTask form options - map through days of the week
 6. Add Form Select as a Component: https://codesandbox.io/s/eager-violet-kkw0x?file=/src/Select.js
+   - Got Date form select to reset after I hit the submit button. Its because I did passed the date data incorrectly.
 
 ## TESTING
 

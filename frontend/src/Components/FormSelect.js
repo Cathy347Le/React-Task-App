@@ -3,6 +3,7 @@ import React from 'react';
 // function FormSelect({ values, callback, disabled = false, readonly = false }) {
 function FormSelect({ formOptions, date, onSetDate }) {
   // console.log(formOptions);
+  // console.log(date);
   return (
     <select
       id={formOptions.id}
@@ -12,11 +13,7 @@ function FormSelect({ formOptions, date, onSetDate }) {
     >
       {formOptions.daysOfTheWeek.map(([index, value]) => {
         if (index === 0) {
-          return (
-            <option key={index} value={''}>
-              --{value}--
-            </option>
-          );
+          return <option key={index}>--{value}--</option>;
         } else {
           return (
             <option key={index} value={value}>

@@ -103,7 +103,7 @@ function AddTask({ onAddTask }) {
         <label htmlFor="date">Date:</label>
         <FormSelect
           formOptions={addTaskFormOptions}
-          value={date}
+          date={date}
           // onSetDate={handleSetDate}
           onSetDate={(day) => setDate(day)}
         />
