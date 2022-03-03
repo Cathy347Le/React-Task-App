@@ -28,6 +28,7 @@ readme.md, notes.md, .gitignore
 2. Get server to console each request
 3. Add second way of seeding data
 4. ~~Add env file to remove sensitive data, like MongoDB url and port~~
+5. See branch form-options to add Form Select as its own component
 
 ## TESTING
 
