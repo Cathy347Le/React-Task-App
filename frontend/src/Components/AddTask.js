@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './AddTask.scss';
+import FormSelect from './FormSelect';
 
 function AddTask({ onAddTask }) {
   const [title, setTitle] = useState('');
@@ -31,15 +32,31 @@ function AddTask({ onAddTask }) {
     setCompleted(false);
   };
 
+  // const daysOfTheWeek = [
+  //   'Monday',
+  //   'Tuesday',
+  //   'Wednesday',
+  //   'Thursday',
+  //   'Friday',
+  //   'Saturday',
+  //   'Sunday',
+  // ];
+
   const daysOfTheWeek = [
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-    'Sunday',
+    [0, 'Select Day'],
+    [1, 'Monday'],
+    [2, 'Tuesday'],
+    [3, 'Wednesday'],
+    [4, 'Thursday'],
+    [5, 'Friday'],
+    [6, 'Saturday'],
+    [7, 'Sunday'],
   ];
+
+  // const handleSetDate = (day) => {
+  //   console.log(`Selected ${day}`);
+  //   setDate(day);
+  // };
 
   return (
     <form className="add-new-task-form" onSubmit={onSubmit}>
@@ -69,7 +86,7 @@ function AddTask({ onAddTask }) {
       </div> */}
       <div className="form-ctrl dropdown">
         <label htmlFor="date">Date:</label>
-        <select
+        {/* <select
           id="date"
           name="task_date"
           value={date}
@@ -83,7 +100,13 @@ function AddTask({ onAddTask }) {
               {day}
             </option>
           ))}
-        </select>
+        </select> */}
+        <FormSelect
+          options={daysOfTheWeek}
+          value={date}
+          // onSetDate={handleSetDate}
+          onSetDate={(day) => setDate(day)}
+        />
       </div>
       <input
         className="form-button"

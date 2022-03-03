@@ -28,6 +28,8 @@ readme.md, notes.md, .gitignore
 2. Get server to console each request
 3. Add second way of seeding data
 4. ~~Add env file to remove sensitive data, like MongoDB url and port~~
+5. Update AddTask form options - map through days of the week
+6. Add Form Select as a Component: https://codesandbox.io/s/eager-violet-kkw0x?file=/src/Select.js
 
 ## TESTING
 
